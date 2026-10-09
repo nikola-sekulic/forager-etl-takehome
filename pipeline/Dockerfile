@@ -1,10 +1,15 @@
-FROM python:3.12-slim
+FROM python:3.12-slim-bookworm
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY pipeline/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY pipeline/ pipeline/
+COPY bench/ bench/
+COPY tests/ tests/
 
-CMD ["python", "-u", "main.py"]
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app/pipeline
+
+CMD ["python", "-u", "/app/pipeline/main.py"]

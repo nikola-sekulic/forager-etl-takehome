@@ -1,0 +1,9 @@
+.git
+.test-deps
+.venv
+**/__pycache__
+**/*.pyc
+data
+metrics
+.stage
+*.log

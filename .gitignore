@@ -7,3 +7,6 @@ data/organization/*.json.gz
 es-data/
 *.log
 .DS_Store
+.test-deps/
+metrics/
+.stage/

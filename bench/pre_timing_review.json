@@ -1,0 +1,86 @@
+{
+  "reviewed_at_utc": "2026-10-09T17:17:05.263933+00:00",
+  "run_id": "0a67bc93dc974270b618b46160897343",
+  "measurement_artifact": "bench/latest_default_run.json",
+  "prior_review_artifact": "bench/pre_submission_review.json",
+  "execution_context": "October 9 final-default verification after provider waived defective official correctness test. Fresh isolated Elasticsearch and staging volumes; new pipeline container, raw organization staging and fresh person index. Pipeline limits 2GiB/four CPUs; prefetch disabled. Original ES and test Redis stopped during timed ingest. Full regression suite ran before ingest; independent validation after. Host cache state uncontrolled, input not deliberately warmed by a fresh audit. Build/ES startup excluded; dictionary preparation, staging, ingestion, flush/refresh/count verification included.",
+  "build": {
+    "success": true,
+    "image_id": "sha256:4c1ba55fb8c67750a6ae5c178db89693bdce80b58cd154d78a149ce2e8a8df93",
+    "dependency_layers_cached": true,
+    "pipeline_source_unchanged_from_tested_prefetch_candidate": true,
+    "final_submission_image_id": "sha256:45d18ed3834df8e78e759eb1fd96224406895bb0a8bc0003f607f725ad8ed6a9",
+    "final_rebuild_changes_only_evidence_files": true
+  },
+  "docker_limits_verified": {
+    "image_id": "sha256:4c1ba55fb8c67750a6ae5c178db89693bdce80b58cd154d78a149ce2e8a8df93",
+    "memory_bytes": 2147483648,
+    "nano_cpus": 4000000000,
+    "exit_code": 0,
+    "oom_killed": false,
+    "source_mount_read_only": true
+  },
+  "regression_tests": {
+    "passed": 150,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 13.866,
+    "real_redis_enabled": true,
+    "real_zstandard_enabled": true,
+    "selected_compose_defaults_enabled": true,
+    "org_prefetch_records": 0
+  },
+  "independent_validation": {
+    "run_id": "0a67bc93dc974270b618b46160897343",
+    "exit_code": 0,
+    "counts": {
+      "total_persons": 1000000,
+      "persons_with_role_title": 7081,
+      "persons_at_organization": 647,
+      "persons_with_unresolved_references": 1858
+    },
+    "complete_source_samples_matched": 267,
+    "strategy": "Independent raw-source joins of deterministic reservoir samples plus missing/unresolved ID examples."
+  },
+  "official_grader": {
+    "status": "skipped_at_provider_instruction",
+    "exit_code": null,
+    "provider_reply_relayed_by_candidate_on": "2026-10-09",
+    "provider_instruction": "This was a mistake on our part, for now please skip this test.",
+    "provider_confirmed_observed_counts": false,
+    "frozen_files_unchanged": true,
+    "frozen_file_sha256": {
+      "bench/correctness.py": "f5fe9532868c606cb9a3740b75621c8d4acc2136b25ed25dcc175a6fdeb3edd2",
+      "bench/expected.json": "cc8d5e0c55a12030e80795f3d424056494cd8556845c1d66abe07335e2bb80d9"
+    },
+    "historical_result_artifact": "bench/pre_submission_review.json"
+  },
+  "final_index": {
+    "health": "green",
+    "active_primary_shards": 4,
+    "unassigned_shards": 0,
+    "refresh_interval": "1s",
+    "replicas": 0,
+    "translog_durability": "request"
+  },
+  "performance_report": {
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "ingestion_metrics_file": "metrics/final-review/latest.json"
+  },
+  "limitations": [
+    "Fresh-volume verification is not a controlled performance comparison with earlier reused-ES runs.",
+    "Host cache and ES warmup are uncontrolled; no portable maximum is claimed.",
+    "Candidate human code review and candidate-owned GitHub submission remain to be completed."
+  ],
+  "cleanup": {
+    "isolated_verification_containers_and_volumes_removed": true,
+    "original_elasticsearch_restored_healthy": true
+  },
+  "performance_report_script": {
+    "command": "bash bench/perf.sh",
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "elasticsearch_lifetime_peak_is_not_run_specific": true
+  }
+}

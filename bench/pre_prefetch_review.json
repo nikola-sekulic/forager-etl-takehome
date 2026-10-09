@@ -1,0 +1,86 @@
+{
+  "reviewed_at_utc": "2026-10-07T14:03:07.125891+00:00",
+  "run_id": "70bda7a7f59445fa9fe93ab17df2fe55",
+  "measurement_artifact": "bench/latest_default_run.json",
+  "optimization_evidence": "bench/lmdb_trials.json",
+  "prior_clean_build_and_raw_audit_artifact": "bench/pre_lmdb_review.json",
+  "build": {
+    "pinned_new_zstandard_dependency_installed": true,
+    "final_trial_build_used_cache": true
+  },
+  "execution_context": "Order A/B/A/B, A is preserved pre-optimization image, B is selected codec/writer/reader. Same Elasticsearch container, four shards, unchanged mapping/request durability; first A starts with fresh ES volume, later runs reuse it. Every run starts a new constrained pipeline container, stages raw organizations into a fresh temporary store, and recreates the persons index. No concurrent heavy profiling/validation. Input cache warm from profiles; host cache and ES warmup remain uncontrolled.",
+  "docker_limits_verified": {
+    "memory_bytes": 2147483648,
+    "nano_cpus": 4000000000,
+    "pipeline_exit_code": 0,
+    "oom_killed": false,
+    "source_mount_read_only": true,
+    "verified_for_all_four_full_runs": true
+  },
+  "regression_tests": {
+    "passed": 140,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 14.015,
+    "real_redis_enabled": true,
+    "real_zstandard_enabled": true,
+    "selected_compose_defaults_enabled": true
+  },
+  "independent_validation": {
+    "counts": {
+      "total_persons": 1000000,
+      "persons_with_role_title": 7081,
+      "persons_at_organization": 647,
+      "persons_with_unresolved_references": 1858
+    },
+    "complete_source_samples_matched": 267,
+    "strategy": "32 deterministic reservoir samples per person file plus distinct missing/unresolved ID examples; bounded retention and independent full raw-source joins."
+  },
+  "official_grader": {
+    "exit_code": 1,
+    "total_person_count_passed": true,
+    "role_count_expected": 0,
+    "role_count_actual": 7081,
+    "organization_count_expected": 0,
+    "organization_count_actual": 647,
+    "frozen_files_unchanged": true,
+    "frozen_file_sha256": {
+      "bench/correctness.py": "f5fe9532868c606cb9a3740b75621c8d4acc2136b25ed25dcc175a6fdeb3edd2",
+      "bench/expected.json": "cc8d5e0c55a12030e80795f3d424056494cd8556845c1d66abe07335e2bb80d9"
+    }
+  },
+  "final_index": {
+    "health": "green",
+    "active_primary_shards": 4,
+    "unassigned_shards": 0,
+    "refresh_interval": "1s",
+    "replicas": 0,
+    "translog_durability": "request"
+  },
+  "changes": [
+    "Runtime bounded Zstd dictionary and immutable codec metadata with integrity validation.",
+    "Bounded 10000-record/64MiB transactions and buffer reads; putmulti remains disabled.",
+    "Raw-body/digest profiles plus corruption, codec parity and spawned producer regression tests.",
+    "All four full ingests and all nine store profiles preserved, including slower options."
+  ],
+  "limitations": [
+    "Official placeholder fixture awaits provider clarification.",
+    "Host cache and ES warmup are uncontrolled; no portable performance threshold or absolute optimality claimed.",
+    "No multi-replica full ingest benchmark was performed."
+  ],
+  "performance_report": {
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "ingestion_metrics_file": "metrics/lmdb-tuning/candidate_repeat.json"
+  },
+  "performance_report_script": {
+    "command": "bash bench/perf.sh",
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "elasticsearch_lifetime_peak_is_not_run_specific": true
+  },
+  "cleanup": {
+    "isolated_benchmark_containers_and_volumes_removed": true,
+    "original_elasticsearch_restored_healthy": true
+  }
+}

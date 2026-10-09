@@ -1,9 +1,9 @@
-# Baseline Elasticsearch configuration.
-#
-# This is an intentionally untuned starting point.
+# Four primary shards share 512 MiB of indexing buffer on a 2 GiB heap.
+# ES has no container resource ceiling; the pipeline remains capped separately.
 
 cluster.name: forager-takehome
 node.name: es-01
 network.host: 0.0.0.0
 discovery.type: single-node
 xpack.security.enabled: false
+indices.memory.index_buffer_size: 512mb

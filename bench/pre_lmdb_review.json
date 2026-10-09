@@ -1,0 +1,86 @@
+{
+  "reviewed_at_utc": "2026-10-07T12:19:56.780807+00:00",
+  "clean_build": {
+    "without_cached_build_steps": true,
+    "dependency_installation_passed": true,
+    "compose_version": "5.5.1"
+  },
+  "run_id": "ada8a11413b94a818da2f894998f52d8",
+  "measurement_artifact": "bench/pre_lmdb_default_run.json",
+  "execution_context": "Fresh Elasticsearch and staging volumes, rebuilt image without cached build steps; raw input cache warmed by independent audit. Isolated project changes only host port and metrics destination.",
+  "docker_limits_verified": {
+    "memory_bytes": 2147483648,
+    "nano_cpus": 4000000000,
+    "pipeline_exit_code": 0,
+    "oom_killed": false,
+    "source_mount_read_only": true
+  },
+  "regression_tests": {
+    "passed": 105,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 14.254,
+    "real_redis_enabled": true
+  },
+  "fresh_raw_audit": {
+    "seconds": 70.849,
+    "matched_prior_feed_count_and_error_aggregates": true,
+    "counts": {
+      "index_name": "persons",
+      "total_persons": 1000000,
+      "persons_with_role_title": {
+        "role_title": "Project Manager",
+        "count": 7081
+      },
+      "persons_at_organization": {
+        "name": "Dell Technologies",
+        "count": 647
+      }
+    }
+  },
+  "independent_validation": {
+    "counts": {
+      "total_persons": 1000000,
+      "persons_with_role_title": 7081,
+      "persons_at_organization": 647,
+      "persons_with_unresolved_references": 1858
+    },
+    "complete_source_samples_matched": 267,
+    "strategy": "32 deterministic reservoir samples per person file plus distinct missing/unresolved ID examples; bounded retention and independent full raw-source joins."
+  },
+  "official_grader": {
+    "exit_code": 1,
+    "total_person_count_passed": true,
+    "role_count_expected": 0,
+    "role_count_actual": 7081,
+    "organization_count_expected": 0,
+    "organization_count_actual": 647,
+    "frozen_files_unchanged": true
+  },
+  "final_index": {
+    "health": "green",
+    "active_primary_shards": 4,
+    "unassigned_shards": 0,
+    "refresh_interval": "1s",
+    "replicas": 0,
+    "translog_durability": "request"
+  },
+  "performance_report_script": {
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "elasticsearch_lifetime_peak_mib": 5441.66,
+    "lifetime_peak_is_not_run_specific": true
+  },
+  "changes": [
+    "Independent source validation now samples throughout every person file and explicitly retains join edge cases.",
+    "Atomic Redis ready publication verifies original staging ownership.",
+    "Regression tests exercise namespace loss/owner replacement, duplicate person IDs and failed metrics.",
+    "Historical/current documentation labels corrected; candidate review guide added."
+  ],
+  "limitations": [
+    "Official placeholder fixture awaits provider clarification.",
+    "Fresh-start measurement is slower than earlier reused-Elasticsearch trials; no portable performance threshold or absolute optimality claimed.",
+    "Human code review and understanding must be performed by candidate; agent review is not human review.",
+    "No multi-replica full ingest benchmark was performed."
+  ]
+}

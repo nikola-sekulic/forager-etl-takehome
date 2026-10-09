@@ -1,0 +1,19 @@
+# Isolated bounded-prefetch experiments. Use project name etl-prefetch-test.
+services:
+  elasticsearch:
+    ports: !override ["19200:9200"]
+  pipeline:
+    image: ${PREFETCH_TRIAL_IMAGE:-etl-prefetch-candidate:trial}
+    volumes: !override
+      - ./data:/data:ro
+      - ./metrics/prefetch:/metrics
+      - pipeline-stage:/stage
+  redis:
+    image: redis:7.4.2
+    profiles: [test]
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30

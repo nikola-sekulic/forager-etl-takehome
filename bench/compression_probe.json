@@ -1,0 +1,501 @@
+{
+  "codec_order_by_pass": [
+    [
+      "isal_deflate_1",
+      "zstd_1_dict_0",
+      "zstd_1_dict_32768",
+      "zstd_1_dict_65536",
+      "zstd_3_dict_0",
+      "zstd_3_dict_32768",
+      "zstd_3_dict_65536"
+    ],
+    [
+      "isal_deflate_1",
+      "zstd_3_dict_65536",
+      "zstd_3_dict_32768",
+      "zstd_3_dict_0",
+      "zstd_1_dict_65536",
+      "zstd_1_dict_32768",
+      "zstd_1_dict_0"
+    ],
+    [
+      "zstd_1_dict_32768",
+      "zstd_1_dict_65536",
+      "zstd_3_dict_0",
+      "zstd_3_dict_32768",
+      "zstd_3_dict_65536",
+      "isal_deflate_1",
+      "zstd_1_dict_0"
+    ],
+    [
+      "zstd_1_dict_32768",
+      "zstd_1_dict_0",
+      "isal_deflate_1",
+      "zstd_3_dict_65536",
+      "zstd_3_dict_32768",
+      "zstd_3_dict_0",
+      "zstd_1_dict_65536"
+    ],
+    [
+      "zstd_3_dict_0",
+      "zstd_3_dict_32768",
+      "zstd_3_dict_65536",
+      "isal_deflate_1",
+      "zstd_1_dict_0",
+      "zstd_1_dict_32768",
+      "zstd_1_dict_65536"
+    ]
+  ],
+  "codecs": {
+    "isal_deflate_1": {
+      "compressed_fraction": 0.5116675636811441,
+      "compressed_payload_bytes": 4026156,
+      "dictionary_bytes": 0,
+      "median_compression_seconds": 0.038659829002426704,
+      "median_decompression_seconds": 0.01987179199932143,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4026156,
+          "compression_seconds": 0.03969050600062474,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.019686427996930433,
+          "retained_payload_bytes": 14599454,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4026156,
+          "compression_seconds": 0.03729735999877448,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.019643956002255436,
+          "retained_payload_bytes": 14599454,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4026156,
+          "compression_seconds": 0.038659829002426704,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.01987179199932143,
+          "retained_payload_bytes": 14599454,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4026156,
+          "compression_seconds": 0.03896520299895201,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.0204124599986244,
+          "retained_payload_bytes": 14599454,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4026156,
+          "compression_seconds": 0.03801443300108076,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.021734861998993438,
+          "retained_payload_bytes": 14599454,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 4026156,
+      "training_seconds": 0
+    },
+    "zstd_1_dict_0": {
+      "compressed_fraction": 0.52736533821682,
+      "compressed_payload_bytes": 4149677,
+      "dictionary_bytes": 0,
+      "median_compression_seconds": 0.03248237300067558,
+      "median_decompression_seconds": 0.013952894001704408,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4149677,
+          "compression_seconds": 0.03410784800144029,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.013662736000696896,
+          "retained_payload_bytes": 14722975,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4149677,
+          "compression_seconds": 0.03341868799907388,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.014260132000345038,
+          "retained_payload_bytes": 14722975,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4149677,
+          "compression_seconds": 0.03182741900309338,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.013775601000816096,
+          "retained_payload_bytes": 14722975,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4149677,
+          "compression_seconds": 0.03248237300067558,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.014400000000023283,
+          "retained_payload_bytes": 14722975,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4149677,
+          "compression_seconds": 0.031802161000086926,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.013952894001704408,
+          "retained_payload_bytes": 14722975,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 4149677,
+      "training_seconds": 0
+    },
+    "zstd_1_dict_32768": {
+      "compressed_fraction": 0.32335819344885014,
+      "compressed_payload_bytes": 2544407,
+      "dictionary_bytes": 32768,
+      "median_compression_seconds": 0.02476027900047484,
+      "median_decompression_seconds": 0.009916438997606747,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2544407,
+          "compression_seconds": 0.024524115997337503,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009260973001801176,
+          "retained_payload_bytes": 13117705,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2544407,
+          "compression_seconds": 0.026488219999009743,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.011056983999878867,
+          "retained_payload_bytes": 13117705,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2544407,
+          "compression_seconds": 0.02471027600040543,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.00971244899847079,
+          "retained_payload_bytes": 13117705,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2544407,
+          "compression_seconds": 0.02476027900047484,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009916438997606747,
+          "retained_payload_bytes": 13117705,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2544407,
+          "compression_seconds": 0.03086238999821944,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.01072317599755479,
+          "retained_payload_bytes": 13117705,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 2577175,
+      "training_seconds": 0.1360059779981384
+    },
+    "zstd_1_dict_65536": {
+      "compressed_fraction": 0.32348222926419185,
+      "compressed_payload_bytes": 2545383,
+      "dictionary_bytes": 65536,
+      "median_compression_seconds": 0.024345030000404222,
+      "median_decompression_seconds": 0.009872195001662476,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2545383,
+          "compression_seconds": 0.023866955998528283,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.00983251900106552,
+          "retained_payload_bytes": 13118681,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2545383,
+          "compression_seconds": 0.02361300199845573,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009412694002094213,
+          "retained_payload_bytes": 13118681,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2545383,
+          "compression_seconds": 0.025168409996695118,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.010240509996947367,
+          "retained_payload_bytes": 13118681,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2545383,
+          "compression_seconds": 0.02723772700119298,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.010038011998403817,
+          "retained_payload_bytes": 13118681,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2545383,
+          "compression_seconds": 0.024345030000404222,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009872195001662476,
+          "retained_payload_bytes": 13118681,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 2610919,
+      "training_seconds": 0.11471857299693511
+    },
+    "zstd_3_dict_0": {
+      "compressed_fraction": 0.5204340745193453,
+      "compressed_payload_bytes": 4095137,
+      "dictionary_bytes": 0,
+      "median_compression_seconds": 0.0422616210016713,
+      "median_decompression_seconds": 0.014565476001735078,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4095137,
+          "compression_seconds": 0.04152007200173102,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.013840872998116538,
+          "retained_payload_bytes": 14668435,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4095137,
+          "compression_seconds": 0.04121806300099706,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.014114952999079833,
+          "retained_payload_bytes": 14668435,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4095137,
+          "compression_seconds": 0.04273079099948518,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.0156843589975324,
+          "retained_payload_bytes": 14668435,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4095137,
+          "compression_seconds": 0.043064225999842165,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.014713889999256935,
+          "retained_payload_bytes": 14668435,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 4095137,
+          "compression_seconds": 0.0422616210016713,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.014565476001735078,
+          "retained_payload_bytes": 14668435,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 4095137,
+      "training_seconds": 0
+    },
+    "zstd_3_dict_32768": {
+      "compressed_fraction": 0.30552906168049465,
+      "compressed_payload_bytes": 2404115,
+      "dictionary_bytes": 32768,
+      "median_compression_seconds": 0.031475436000619084,
+      "median_decompression_seconds": 0.010341195000364678,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2404115,
+          "compression_seconds": 0.031475436000619084,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.010509435000130907,
+          "retained_payload_bytes": 12977413,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2404115,
+          "compression_seconds": 0.03137783700003638,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009315085997513961,
+          "retained_payload_bytes": 12977413,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2404115,
+          "compression_seconds": 0.03239343599852873,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.012582725001266226,
+          "retained_payload_bytes": 12977413,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2404115,
+          "compression_seconds": 0.03441149799982668,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.010341195000364678,
+          "retained_payload_bytes": 12977413,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2404115,
+          "compression_seconds": 0.03126532999885967,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009903916998155182,
+          "retained_payload_bytes": 12977413,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 2436883,
+      "training_seconds": 0.1360059779981384
+    },
+    "zstd_3_dict_65536": {
+      "compressed_fraction": 0.29599368129022663,
+      "compressed_payload_bytes": 2329084,
+      "dictionary_bytes": 65536,
+      "median_compression_seconds": 0.03292641699954402,
+      "median_decompression_seconds": 0.009883474998787278,
+      "passes": [
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2329084,
+          "compression_seconds": 0.031003263000457082,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009232959997461876,
+          "retained_payload_bytes": 12902382,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2329084,
+          "compression_seconds": 0.030575351000152295,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009706245000415947,
+          "retained_payload_bytes": 12902382,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2329084,
+          "compression_seconds": 0.035498555000231136,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009952366999641526,
+          "retained_payload_bytes": 12902382,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2329084,
+          "compression_seconds": 0.03292641699954402,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.010271368999383412,
+          "retained_payload_bytes": 12902382,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        },
+        {
+          "all_records_equal": true,
+          "compressed_bytes": 2329084,
+          "compression_seconds": 0.035048579000431346,
+          "decompressed_bytes": 7868695,
+          "decompression_seconds": 0.009883474998787278,
+          "retained_payload_bytes": 12902382,
+          "roundtrip_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af"
+        }
+      ],
+      "payload_plus_dictionary_bytes": 2394620,
+      "training_seconds": 0.11471857299693511
+    }
+  },
+  "dictionary_training": {
+    "32768": {
+      "dictionary_bytes": 32768,
+      "dictionary_sha256": "642df34acadf5ed869a4c4b5f3ce97af037aa344b3a75e7737b1572b79dd8c55",
+      "training_seconds": 0.1360059779981384
+    },
+    "65536": {
+      "dictionary_bytes": 65536,
+      "dictionary_sha256": "99d0a578b729349b7b80036441e748c9fefaea2f604bbcf895ca85915d77d846",
+      "training_seconds": 0.11471857299693511
+    }
+  },
+  "isal_version": "1.7.2",
+  "limitations": [
+    "Codec-only held-out sample; no LMDB, multiprocessing, cache or Elasticsearch timing.",
+    "All JSON stays in memory for codec comparison; this is not whole-pipeline performance.",
+    "Byte ceiling covers retained sample/frame/dictionary payloads, not native trainer workspace or process RSS.",
+    "Training and dictionary setup costs must be included in any full ingestion comparison."
+  ],
+  "orjson_version": "3.10.7",
+  "python_version": "3.12.15",
+  "retained_payload_ceiling_bytes": 67108864,
+  "sample": {
+    "files": 8,
+    "heldout_bytes": 7868695,
+    "heldout_records": 3072,
+    "heldout_sha256": "3086bef132e47b954c014f5af4ad2cab1955d2be5f97964f7caf4bbf78ec67af",
+    "maximum_records": 4096,
+    "maximum_selected_record_bytes": 65536,
+    "omitted_large_or_over_budget_rows": 0,
+    "per_file_selected_counts": [
+      512,
+      512,
+      512,
+      512,
+      512,
+      512,
+      512,
+      512
+    ],
+    "sample_payload_byte_limit": 16777216,
+    "scanned_records": 396544,
+    "selected_records": 4096,
+    "selection": "sorted file order; every stride-th row; per-file count/byte caps",
+    "stride": 97,
+    "training_bytes": 2606299,
+    "training_records": 1024,
+    "training_sha256": "0eeff2e67045969d82e6b2f9a580f512245b72d10cb65868cbd2d9c9e59c2ee5"
+  },
+  "sampling_seconds": 5.579678695001348,
+  "timestamp_utc": "2026-10-07T13:27:49.957704+00:00",
+  "total_probe_seconds": 8.097509518000152,
+  "zstandard_version": "0.25.0",
+  "zstd_library_version": [
+    1,
+    5,
+    7
+  ]
+}

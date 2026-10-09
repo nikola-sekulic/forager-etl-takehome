@@ -1,0 +1,115 @@
+{
+  "reviewed_at_utc": "2026-10-07T14:40:57.974055+00:00",
+  "run_id": "30ca1cb13e1d478bb6a87a0d655bb515",
+  "measurement_artifact": "bench/latest_default_run.json",
+  "optimization_evidence": "bench/prefetch_trials.json",
+  "prior_codec_review_artifact": "bench/pre_prefetch_review.json",
+  "execution_context": "Sequential A/B/A/B; A is the preserved selected Zstd image before prefetch, B is sorted 256-person prefetch. First A starts with fresh isolated Elasticsearch storage; later runs reuse ES. Every run starts a new 2GiB/four-CPU pipeline container, rebuilds the organization store from raw input, and recreates the persons index. Host input caches were warm from profiling; ES/host cache effects are uncontrolled. No heavy profiling or validation ran concurrently. Image builds/ES startup excluded.",
+  "docker_limits_verified": [
+    {
+      "label": "control_first",
+      "image_id": "sha256:a3379bedf989f150ca62a53dbc1395d1094741765601a30b10cd956d12e5a716",
+      "memory_bytes": 2147483648,
+      "nano_cpus": 4000000000,
+      "exit_code": 0,
+      "oom_killed": false,
+      "source_mount_read_only": true
+    },
+    {
+      "label": "sorted_first",
+      "image_id": "sha256:51e7d2c9e127db70576656faf714ff811dc79182e168a71143701721133fa61a",
+      "memory_bytes": 2147483648,
+      "nano_cpus": 4000000000,
+      "exit_code": 0,
+      "oom_killed": false,
+      "source_mount_read_only": true
+    },
+    {
+      "label": "control_repeat",
+      "image_id": "sha256:a3379bedf989f150ca62a53dbc1395d1094741765601a30b10cd956d12e5a716",
+      "memory_bytes": 2147483648,
+      "nano_cpus": 4000000000,
+      "exit_code": 0,
+      "oom_killed": false,
+      "source_mount_read_only": true
+    },
+    {
+      "label": "sorted_repeat",
+      "image_id": "sha256:51e7d2c9e127db70576656faf714ff811dc79182e168a71143701721133fa61a",
+      "memory_bytes": 2147483648,
+      "nano_cpus": 4000000000,
+      "exit_code": 0,
+      "oom_killed": false,
+      "source_mount_read_only": true
+    }
+  ],
+  "regression_tests": {
+    "passed": 150,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 14.405,
+    "real_redis_enabled": true,
+    "real_zstandard_enabled": true,
+    "org_prefetch_records": 256
+  },
+  "independent_validation": {
+    "run_id": "44b7fd84f60e476e9fefa011e02c6fe1",
+    "exit_code": 0,
+    "counts": {
+      "total_persons": 1000000,
+      "persons_with_role_title": 7081,
+      "persons_at_organization": 647,
+      "persons_with_unresolved_references": 1858
+    },
+    "complete_source_samples_matched": 267,
+    "strategy": "Independent full raw-source joins of deterministic reservoir samples and missing/unresolved ID examples.",
+    "applies_to": "Final sorted-prefetch repeat; validation is outside timed ingestion."
+  },
+  "official_grader": {
+    "exit_code": 1,
+    "total_person_count_passed": true,
+    "role_count_expected": 0,
+    "role_count_actual": 7081,
+    "organization_count_expected": 0,
+    "organization_count_actual": 647,
+    "frozen_files_unchanged": true,
+    "frozen_file_sha256": {
+      "bench/correctness.py": "f5fe9532868c606cb9a3740b75621c8d4acc2136b25ed25dcc175a6fdeb3edd2",
+      "bench/expected.json": "cc8d5e0c55a12030e80795f3d424056494cd8556845c1d66abe07335e2bb80d9"
+    },
+    "rerun_in_this_experiment": false,
+    "evidence": "bench/pre_prefetch_review.json; current independent queries confirm the same counts."
+  },
+  "final_index": {
+    "health": "green",
+    "active_primary_shards": 4,
+    "unassigned_shards": 0,
+    "refresh_interval": "1s",
+    "replicas": 0,
+    "translog_durability": "request"
+  },
+  "changes": [
+    "Optional bounded LMDB sorted prefetch tested and kept disabled.",
+    "All five microprofiles and four full ingests preserved, including negative results."
+  ],
+  "performance_report": {
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "ingestion_metrics_file": "metrics/prefetch/full_control_repeat.json"
+  },
+  "limitations": [
+    "Local warm-cache evidence, not a portable maximum or statistically conclusive speed estimate.",
+    "Sorted point lookups do not guarantee sequential physical I/O.",
+    "The supplied official zero placeholders remain unresolved."
+  ],
+  "build": {
+    "success": true,
+    "pipeline_source_layer_cached_from_tested_candidate": true,
+    "final_image_id": "sha256:baa99f0595d519a5e6241821cf1ba1e9ce78fb44fdc74a4f882cbec0ec0b2aa8",
+    "org_prefetch_records_default": 0
+  },
+  "cleanup": {
+    "isolated_benchmark_containers_and_volumes_removed": true,
+    "original_elasticsearch_restored_healthy": true
+  }
+}

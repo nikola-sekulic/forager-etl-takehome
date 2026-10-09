@@ -1,0 +1,1673 @@
+{
+  "pipeline_memory_limit_bytes": 2147483648,
+  "pipeline_cpus": 4,
+  "microprofile_context": "Sequential fresh containers, all 529041 organizations staged from raw input, 160000 persons transformed serially without Elasticsearch. Host/filesystem caches uncontrolled; the original repeat is essential evidence. Digests compare complete emitted person JSON. Both LMDB read modes additionally check 128 raw organization bodies. Training is included in organization_stage_seconds. Only aggregate evidence is saved; dictionaries are temporary.",
+  "compression_sample_artifact": "bench/compression_probe.json",
+  "microprofiles": [
+    {
+      "label": "original_first",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "0b47ec25a6158021088893c0ca57050648d06d1b666eec27eed496a8d66a9433",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": "0",
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": null,
+          "ORG_WRITE_BYTES": null,
+          "ORG_PUTMULTI": null,
+          "ORG_READ_BUFFERS": null
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1190559872,
+        "organization_stage_seconds": 16.769214976000512,
+        "organization_stage_workers": 4,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 32.49848,
+          "average_cpu_cores": 1.937952865566706,
+          "cpu_quota_utilization_percent": 48.44882163916765,
+          "container_cpu_user_seconds": 21.10762,
+          "container_cpu_system_seconds": 11.39086,
+          "cpu_cgroup_throttled_seconds": 0.018733,
+          "cpu_cgroup_periods": 167,
+          "cpu_cgroup_throttled_periods": 1
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.06476299000132713,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8413885369991476
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8741091319971019
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.851878786997986
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8372963789988717
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8814708539975982
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8488714670020272
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8300128910013882
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8456598359989584
+          }
+        ],
+        "person_sample_seconds": 6.810850002999359,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 6.305456,
+          "average_cpu_cores": 0.9257957519580091,
+          "cpu_quota_utilization_percent": 23.14489379895023,
+          "container_cpu_user_seconds": 6.032666,
+          "container_cpu_system_seconds": 0.272791,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 68,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 38.885299,
+        "average_cpu_cores": 1.6403887800150503,
+        "cpu_quota_utilization_percent": 41.00971950037626,
+        "container_cpu_user_seconds": 27.154166,
+        "container_cpu_system_seconds": 11.731133,
+        "cpu_cgroup_throttled_seconds": 0.018733,
+        "cpu_cgroup_periods": 238,
+        "cpu_cgroup_throttled_periods": 1,
+        "max_sampled_cpu_cores": 3.4121179144302727,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1343451136,
+        "elapsed_seconds": 23.708930478002003,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "original_repeat",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "0b47ec25a6158021088893c0ca57050648d06d1b666eec27eed496a8d66a9433",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": "0",
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": null,
+          "ORG_WRITE_BYTES": null,
+          "ORG_PUTMULTI": null,
+          "ORG_READ_BUFFERS": null
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1190625408,
+        "organization_stage_seconds": 9.38124029699975,
+        "organization_stage_workers": 4,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 27.289516,
+          "average_cpu_cores": 2.90886956789484,
+          "cpu_quota_utilization_percent": 72.72173919737101,
+          "container_cpu_user_seconds": 21.790433,
+          "container_cpu_system_seconds": 5.499082,
+          "cpu_cgroup_throttled_seconds": 0.754536,
+          "cpu_cgroup_periods": 91,
+          "cpu_cgroup_throttled_periods": 26
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05598018599994248,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8207064730013371
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8499885109995375
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8170694570035266
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8474860540009104
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8097449169981701
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8136179560024175
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8014563500000804
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7993477970012464
+          }
+        ],
+        "person_sample_seconds": 6.559597219998977,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 6.202587,
+          "average_cpu_cores": 0.9455743686654235,
+          "cpu_quota_utilization_percent": 23.63935921663559,
+          "container_cpu_user_seconds": 5.889244,
+          "container_cpu_system_seconds": 0.313344,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 66,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 33.567556,
+        "average_cpu_cores": 2.0908878380949227,
+        "cpu_quota_utilization_percent": 52.27219595237307,
+        "container_cpu_user_seconds": 27.692855,
+        "container_cpu_system_seconds": 5.8747,
+        "cpu_cgroup_throttled_seconds": 0.754536,
+        "cpu_cgroup_periods": 157,
+        "cpu_cgroup_throttled_periods": 26,
+        "max_sampled_cpu_cores": 4.2662428250947695,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1352216576,
+        "elapsed_seconds": 16.05738046999977,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "isal_50k_putmulti_buffers",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "4225be6883cba86a8d6d27fcfe4034214139b39f756b1716fa344ad19ab3fb82",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": true,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "50000",
+          "ORG_WRITE_BYTES": null,
+          "ORG_PUTMULTI": "1",
+          "ORG_READ_BUFFERS": "1"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1462288512,
+        "organization_stage_seconds": 9.680351050999889,
+        "organization_stage_workers": 4,
+        "organization_write_records": 50000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": true,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 25.0049,
+          "average_cpu_cores": 2.5824685273235075,
+          "cpu_quota_utilization_percent": 64.56171318308769,
+          "container_cpu_user_seconds": 18.857667,
+          "container_cpu_system_seconds": 6.147233,
+          "cpu_cgroup_throttled_seconds": 0.522898,
+          "cpu_cgroup_periods": 97,
+          "cpu_cgroup_throttled_periods": 34
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05601053599821171,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8581874099982088
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8622692649987584
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8632045179983834
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8580562530005409
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.841383273997053
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8446259750016907
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8285776789998636
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8341474640001252
+          }
+        ],
+        "person_sample_seconds": 6.790608905997942,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 6.292054,
+          "average_cpu_cores": 0.9265817082238997,
+          "cpu_quota_utilization_percent": 23.164542705597494,
+          "container_cpu_user_seconds": 5.99139,
+          "container_cpu_system_seconds": 0.300664,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 68,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 31.386182,
+        "average_cpu_cores": 1.8908576772117969,
+        "cpu_quota_utilization_percent": 47.27144193029492,
+        "container_cpu_user_seconds": 24.851913,
+        "container_cpu_system_seconds": 6.53427,
+        "cpu_cgroup_throttled_seconds": 0.522898,
+        "cpu_cgroup_periods": 166,
+        "cpu_cgroup_throttled_periods": 34,
+        "max_sampled_cpu_cores": 4.197391233984486,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1938550784,
+        "elapsed_seconds": 16.601855453001917,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "zstd_32k_10k_putmulti_buffers_first",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": true,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "10000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "1",
+          "ORG_READ_BUFFERS": "1"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 826183967,
+        "organization_stage_seconds": 7.32738358899951,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": true,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.2376450349984225,
+        "organization_dictionary_training_seconds": 0.11878922899995814,
+        "organization_codec_prepare_seconds": 0.35778851400027634,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 21.483493,
+          "average_cpu_cores": 2.931736607485987,
+          "cpu_quota_utilization_percent": 73.29341518714968,
+          "container_cpu_user_seconds": 18.892804,
+          "container_cpu_system_seconds": 2.590689,
+          "cpu_cgroup_throttled_seconds": 0.102461,
+          "cpu_cgroup_periods": 74,
+          "cpu_cgroup_throttled_periods": 12
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.053293066997866845,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7439133280022361
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7486506499990355
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7642871729985927
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7512194070004625
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7696200280006451
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7505088159996376
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7300526439976238
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.763567869002145
+          }
+        ],
+        "person_sample_seconds": 6.021968208999169,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 5.666879,
+          "average_cpu_cores": 0.9410343600837136,
+          "cpu_quota_utilization_percent": 23.52585900209284,
+          "container_cpu_user_seconds": 5.402051,
+          "container_cpu_system_seconds": 0.264828,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 60,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 27.205954,
+        "average_cpu_cores": 2.023707566996864,
+        "cpu_quota_utilization_percent": 50.5926891749216,
+        "container_cpu_user_seconds": 24.312159,
+        "container_cpu_system_seconds": 2.893794,
+        "cpu_cgroup_throttled_seconds": 0.102461,
+        "cpu_cgroup_periods": 135,
+        "cpu_cgroup_throttled_periods": 12,
+        "max_sampled_cpu_cores": 4.039709220070765,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1017233408,
+        "elapsed_seconds": 13.445465400000103,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "zstd_32k_original_writer",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": false,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "1000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "0",
+          "ORG_READ_BUFFERS": "0"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 756420932,
+        "organization_stage_seconds": 8.923304619998817,
+        "organization_stage_workers": 4,
+        "organization_write_records": 1000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.2265438689973962,
+        "organization_dictionary_training_seconds": 0.12463878299968201,
+        "organization_codec_prepare_seconds": 0.3532569630006037,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 22.838606,
+          "average_cpu_cores": 2.5593721949261683,
+          "cpu_quota_utilization_percent": 63.98430487315421,
+          "container_cpu_user_seconds": 18.891804,
+          "container_cpu_system_seconds": 3.946802,
+          "cpu_cgroup_throttled_seconds": 1.297111,
+          "cpu_cgroup_periods": 85,
+          "cpu_cgroup_throttled_periods": 38
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05183492500145803,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.734070612998039
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7673212529989542
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7881615149999561
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7587897179982974
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7972898420011916
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8102564040018478
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7711619610017806
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7500983699974313
+          }
+        ],
+        "person_sample_seconds": 6.177344828000059,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 5.812197,
+          "average_cpu_cores": 0.940889194602679,
+          "cpu_quota_utilization_percent": 23.522229865066972,
+          "container_cpu_user_seconds": 5.574075,
+          "container_cpu_system_seconds": 0.238122,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 62,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 28.712117,
+        "average_cpu_cores": 1.8899749538441124,
+        "cpu_quota_utilization_percent": 47.24937384610281,
+        "container_cpu_user_seconds": 24.4778,
+        "container_cpu_system_seconds": 4.234316,
+        "cpu_cgroup_throttled_seconds": 1.297111,
+        "cpu_cgroup_periods": 148,
+        "cpu_cgroup_throttled_periods": 38,
+        "max_sampled_cpu_cores": 4.094224781252329,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 906207232,
+        "elapsed_seconds": 15.193752057999518,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "zstd_32k_10k_single_put",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": false,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "10000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "0",
+          "ORG_READ_BUFFERS": "0"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 826114372,
+        "organization_stage_seconds": 6.04371289899791,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.22877794599844492,
+        "organization_dictionary_training_seconds": 0.11834567400001106,
+        "organization_codec_prepare_seconds": 0.3482813909977267,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 21.583711,
+          "average_cpu_cores": 3.5711432676806725,
+          "cpu_quota_utilization_percent": 89.27858169201681,
+          "container_cpu_user_seconds": 18.944199,
+          "container_cpu_system_seconds": 2.639512,
+          "cpu_cgroup_throttled_seconds": 0.065741,
+          "cpu_cgroup_periods": 60,
+          "cpu_cgroup_throttled_periods": 11
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05328049899981124,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.741786010999931
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7283320120004646
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.717021829001169
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7209844130011334
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7246546160022262
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7247593749998487
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7237532270009979
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7230103319998307
+          }
+        ],
+        "person_sample_seconds": 5.804442435000965,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 5.454502,
+          "average_cpu_cores": 0.9397116193467931,
+          "cpu_quota_utilization_percent": 23.49279048366983,
+          "container_cpu_user_seconds": 5.215087,
+          "container_cpu_system_seconds": 0.239414,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 58,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 27.097118,
+        "average_cpu_cores": 2.2691867779547894,
+        "cpu_quota_utilization_percent": 56.729669448869736,
+        "container_cpu_user_seconds": 24.17377,
+        "container_cpu_system_seconds": 2.923347,
+        "cpu_cgroup_throttled_seconds": 0.065741,
+        "cpu_cgroup_periods": 119,
+        "cpu_cgroup_throttled_periods": 11,
+        "max_sampled_cpu_cores": 4.07322917744603,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1040269312,
+        "elapsed_seconds": 11.943159938000463,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "zstd_32k_10k_putmulti_buffers_repeat",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": true,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "10000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "1",
+          "ORG_READ_BUFFERS": "1"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 825762116,
+        "organization_stage_seconds": 8.428417499999341,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": true,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.22261332500056596,
+        "organization_dictionary_training_seconds": 0.12672357199699036,
+        "organization_codec_prepare_seconds": 0.35252237700115074,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 21.366154,
+          "average_cpu_cores": 2.534863179456748,
+          "cpu_quota_utilization_percent": 63.3715794864187,
+          "container_cpu_user_seconds": 18.821506,
+          "container_cpu_system_seconds": 2.544648,
+          "cpu_cgroup_throttled_seconds": 0.162856,
+          "cpu_cgroup_periods": 85,
+          "cpu_cgroup_throttled_periods": 12
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05510269200021867,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7391417590006313
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.783985568999924
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7445080709985632
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7326216500005103
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7568813689977105
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8084428000001935
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7555439640018449
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7423885329990298
+          }
+        ],
+        "person_sample_seconds": 6.063690171002236,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 5.705184,
+          "average_cpu_cores": 0.9408765684109847,
+          "cpu_quota_utilization_percent": 23.521914210274616,
+          "container_cpu_user_seconds": 5.424028,
+          "container_cpu_system_seconds": 0.281157,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 61,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 27.129707,
+        "average_cpu_cores": 1.8597556812753504,
+        "cpu_quota_utilization_percent": 46.49389203188376,
+        "container_cpu_user_seconds": 24.252423,
+        "container_cpu_system_seconds": 2.877284,
+        "cpu_cgroup_throttled_seconds": 0.162856,
+        "cpu_cgroup_periods": 146,
+        "cpu_cgroup_throttled_periods": 12,
+        "max_sampled_cpu_cores": 4.05461349564269,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1024319488,
+        "elapsed_seconds": 14.589751703999355,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "zstd_32k_10k_single_put_buffers",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "profile_source_sha256": "9a50066f5e06fe38637dde2186318b9c4f2acba790267caf460ac4d9a4cb2199",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": true,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "10000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "0",
+          "ORG_READ_BUFFERS": "1"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 826376516,
+        "organization_stage_seconds": 6.305784456002584,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.22237920699990354,
+        "organization_dictionary_training_seconds": 0.12403231200005393,
+        "organization_codec_prepare_seconds": 0.3488213769996946,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 22.393157,
+          "average_cpu_cores": 3.5509947083017637,
+          "cpu_quota_utilization_percent": 88.77486770754409,
+          "container_cpu_user_seconds": 19.696009,
+          "container_cpu_system_seconds": 2.697148,
+          "cpu_cgroup_throttled_seconds": 0.221384,
+          "cpu_cgroup_periods": 63,
+          "cpu_cgroup_throttled_periods": 19
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05310420800014981,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.747392449000472
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7558935570014
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7573032210020756
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7385139719990548
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7549601210012042
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7455796960020962
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7369519409985514
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.7402719320016331
+          }
+        ],
+        "person_sample_seconds": 5.977063695998368,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 5.623544,
+          "average_cpu_cores": 0.9408539520442039,
+          "cpu_quota_utilization_percent": 23.521348801105095,
+          "container_cpu_user_seconds": 5.417431,
+          "container_cpu_system_seconds": 0.206112,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 60,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 28.074781,
+        "average_cpu_cores": 2.2679762537470918,
+        "cpu_quota_utilization_percent": 56.699406343677296,
+        "container_cpu_user_seconds": 25.119706,
+        "container_cpu_system_seconds": 2.955076,
+        "cpu_cgroup_throttled_seconds": 0.221384,
+        "cpu_cgroup_periods": 124,
+        "cpu_cgroup_throttled_periods": 19,
+        "max_sampled_cpu_cores": 4.069735097444814,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1024704512,
+        "elapsed_seconds": 12.380597826999292,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    },
+    {
+      "label": "isal_10k_single_put_buffers",
+      "measurement": {
+        "status": "complete",
+        "execution": "Full production organization stage; serial bounded person sample; no Elasticsearch.",
+        "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "python": "3.12.15",
+        "store_source_sha256": "c2d22b4b2a9885b77a54b841475f88c2823b38d07d8e9d6e24aaf77f756e7705",
+        "codec_source_sha256": "68fb92929076d5645284f6af6eca9464afdb3129420839c1b7d203099ed69925",
+        "profile_source_sha256": "dac2aec9689899ffeb7315a901c97a5e72e7eaf9a203d1ffd4f4798f326d6147",
+        "organization_source_files": 8,
+        "person_source_files": 8,
+        "person_records_per_file_limit": 20000,
+        "organization_checks_per_file_limit": 16,
+        "organization_cache_bytes": 4194304,
+        "organization_read_buffers": true,
+        "requested_settings": {
+          "STAGE_WORKERS": "4",
+          "ORG_WRITE_RECORDS": "10000",
+          "ORG_WRITE_BYTES": "67108864",
+          "ORG_PUTMULTI": "0",
+          "ORG_READ_BUFFERS": "1",
+          "ORG_CODEC": "isal",
+          "ORG_ZSTD_DICT_BYTES": "0"
+        },
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1262670078,
+        "organization_stage_seconds": 9.29067975900034,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_codec": "isal",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 0,
+        "organization_dictionary_bytes": 0,
+        "organization_dictionary_sha256": null,
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 0,
+        "organization_dictionary_sample_bytes": 0,
+        "organization_dictionary_sampling_seconds": 0.0,
+        "organization_dictionary_training_seconds": 0.0,
+        "organization_codec_prepare_seconds": 0.00013789300282951444,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 26.044371,
+          "average_cpu_cores": 2.8032054893893994,
+          "cpu_quota_utilization_percent": 70.08013723473499,
+          "container_cpu_user_seconds": 22.426724,
+          "container_cpu_system_seconds": 3.617647,
+          "cpu_cgroup_throttled_seconds": 0.44204,
+          "cpu_cgroup_periods": 91,
+          "cpu_cgroup_throttled_periods": 30
+        },
+        "organization_bodies_checked": 128,
+        "organization_reader_modes_checked": 2,
+        "organization_sample_sha256": "c0d749e2be4346b78d7b22fa22b90a14ed0075542a0c8011c95089876a592198",
+        "organization_sample_verification_seconds": 0.05154420600229059,
+        "persons": 160000,
+        "roles": 332523,
+        "resolved_org_refs": 220750,
+        "unresolved_org_refs": 1,
+        "persons_with_unresolved_orgs": 1,
+        "enriched_document_bytes": 1067640801,
+        "person_sample_sha256": "b24dd9a2c8f7f9a3983b89b51cf285dbd4db2899c9f4069f3b12f7721e704981",
+        "person_sample_files": [
+          {
+            "file": "data_0_0_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8287556280010904
+          },
+          {
+            "file": "data_0_1_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8434745890008344
+          },
+          {
+            "file": "data_0_2_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8512192169982882
+          },
+          {
+            "file": "data_0_3_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8314400630006276
+          },
+          {
+            "file": "data_0_4_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8316319479999947
+          },
+          {
+            "file": "data_0_5_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8648269429977518
+          },
+          {
+            "file": "data_0_6_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.832125052002084
+          },
+          {
+            "file": "data_0_7_0.json.gz",
+            "persons": 20000,
+            "seconds": 0.8206191030003538
+          }
+        ],
+        "person_sample_seconds": 6.7042754819995025,
+        "person_sample_cpu": {
+          "container_cpu_seconds": 6.337444,
+          "average_cpu_cores": 0.9452839485811079,
+          "cpu_quota_utilization_percent": 23.632098714527697,
+          "container_cpu_user_seconds": 5.986676,
+          "container_cpu_system_seconds": 0.350769,
+          "cpu_cgroup_throttled_seconds": 0.0,
+          "cpu_cgroup_periods": 67,
+          "cpu_cgroup_throttled_periods": 0
+        },
+        "container_cpu_seconds": 32.45695,
+        "average_cpu_cores": 2.0150287433740672,
+        "cpu_quota_utilization_percent": 50.37571858435168,
+        "container_cpu_user_seconds": 28.424514,
+        "container_cpu_system_seconds": 4.032435,
+        "cpu_cgroup_throttled_seconds": 0.44204,
+        "cpu_cgroup_periods": 159,
+        "cpu_cgroup_throttled_periods": 30,
+        "max_sampled_cpu_cores": 4.125102442979804,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "peak_container_memory_bytes": 1497890816,
+        "elapsed_seconds": 16.10926097599804,
+        "limitations": [
+          "Person sample uses the first N rows in every input file, not a random or exhaustive sample.",
+          "Person processing is serial; full ingestion uses multiple workers and asynchronous Elasticsearch writes.",
+          "Transform timing includes gzip, JSON decoding, join/encoding and SHA256; there is no HTTP or Elasticsearch.",
+          "Organization checks verify bounded raw-source bodies and both LMDB reader modes, not every staged value.",
+          "Filesystem and host cache state are uncontrolled; compare repeated runs before selecting defaults.",
+          "Cgroup peak memory covers the container lifetime; use a fresh container for each invocation."
+        ]
+      }
+    }
+  ],
+  "full_run_context": "Order A/B/A/B, A is preserved pre-optimization image, B is selected codec/writer/reader. Same Elasticsearch container, four shards, unchanged mapping/request durability; first A starts with fresh ES volume, later runs reuse it. Every run starts a new constrained pipeline container, stages raw organizations into a fresh temporary store, and recreates the persons index. No concurrent heavy profiling/validation. Input cache warm from profiles; host cache and ES warmup remain uncontrolled.",
+  "images": {
+    "control": "sha256:7c7e6c3702c0e6dd2f1e4a545d453d685556e9acaa1a83e7ab47ce8f3d579255",
+    "candidate": "sha256:0d0b6b29c0790ed98bec968c79d0e187fcded14ccdc08eaf5a6a9ecbe44a98f7"
+  },
+  "full_runs": [
+    {
+      "label": "control_fresh",
+      "measurement": {
+        "status": "completed",
+        "run_id": "19fc58365af747f59b53f176c4545998",
+        "started_at": "2026-10-07T13:46:15.452122+00:00",
+        "peak_elasticsearch_memory_bytes": null,
+        "workers": 8,
+        "bulk_target_bytes": 8388608,
+        "bulk_max_docs": 2000,
+        "org_cache_bytes_per_process": 4194304,
+        "index_shards": 4,
+        "person_files": 8,
+        "organization_files": 8,
+        "bulk_overlap": true,
+        "bulk_senders": 1,
+        "elasticsearch_version": "8.13.4",
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1191211136,
+        "organization_stage_seconds": 7.753549730998202,
+        "organization_stage_workers": 4,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 27.186677,
+          "average_cpu_cores": 3.506352308712148,
+          "cpu_quota_utilization_percent": 87.6588077178037,
+          "container_cpu_user_seconds": 21.980662,
+          "container_cpu_system_seconds": 5.206015,
+          "cpu_cgroup_throttled_seconds": 0.770254,
+          "cpu_cgroup_periods": 77,
+          "cpu_cgroup_throttled_periods": 28
+        },
+        "persons_indexed": 1000000,
+        "roles": 2083023,
+        "resolved_org_refs": 1381699,
+        "unresolved_org_refs": 3638,
+        "persons_with_unresolved_orgs": 1858,
+        "retried_documents": 0,
+        "bulk_requests": 816,
+        "bulk_bytes": 6747225963,
+        "bulk_call_seconds": 287.5374753960605,
+        "worker_wall_seconds": 375.1427769749971,
+        "worker_cpu_seconds": 144.594453961,
+        "person_ingest_seconds": 49.35333339600038,
+        "person_ingest_cpu": {
+          "container_cpu_seconds": 147.219371,
+          "average_cpu_cores": 2.982967124403612,
+          "cpu_quota_utilization_percent": 74.5741781100903,
+          "container_cpu_user_seconds": 108.03478,
+          "container_cpu_system_seconds": 39.18459,
+          "cpu_cgroup_throttled_seconds": 7.675898,
+          "cpu_cgroup_periods": 492,
+          "cpu_cgroup_throttled_periods": 54
+        },
+        "elasticsearch_person_count": 1000000,
+        "unresolved_org_ref_percent": 0.17465001586636344,
+        "wall_seconds": 60.60555807700075,
+        "persons_per_second": 16500.136814670976,
+        "peak_pipeline_memory_bytes": 1846697984,
+        "container_cpu_seconds": 174.60831,
+        "average_cpu_cores": 2.881281382725822,
+        "cpu_quota_utilization_percent": 72.03203456814555,
+        "container_cpu_user_seconds": 130.122418,
+        "container_cpu_system_seconds": 44.485892,
+        "cpu_cgroup_throttled_seconds": 8.446152,
+        "cpu_cgroup_periods": 585,
+        "cpu_cgroup_throttled_periods": 82,
+        "max_sampled_cpu_cores": 4.546133691023951,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "finished_at": "2026-10-07T13:47:16.055931+00:00"
+      }
+    },
+    {
+      "label": "candidate_first",
+      "measurement": {
+        "status": "completed",
+        "run_id": "32d1dc3f02e14cee9a18133cb346c0f9",
+        "started_at": "2026-10-07T13:48:35.689071+00:00",
+        "peak_elasticsearch_memory_bytes": null,
+        "workers": 8,
+        "bulk_target_bytes": 8388608,
+        "bulk_max_docs": 2000,
+        "org_cache_bytes_per_process": 4194304,
+        "index_shards": 4,
+        "person_files": 8,
+        "organization_files": 8,
+        "bulk_overlap": true,
+        "bulk_senders": 1,
+        "elasticsearch_version": "8.13.4",
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 826216772,
+        "organization_stage_seconds": 7.250526820000232,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_read_buffers": true,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.2550297199995839,
+        "organization_dictionary_training_seconds": 0.12471519399696263,
+        "organization_codec_prepare_seconds": 0.3906992480006011,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 24.408397,
+          "average_cpu_cores": 3.366430827160118,
+          "cpu_quota_utilization_percent": 84.16077067900295,
+          "container_cpu_user_seconds": 21.461658,
+          "container_cpu_system_seconds": 2.946739,
+          "cpu_cgroup_throttled_seconds": 0.081893,
+          "cpu_cgroup_periods": 72,
+          "cpu_cgroup_throttled_periods": 11
+        },
+        "persons_indexed": 1000000,
+        "roles": 2083023,
+        "resolved_org_refs": 1381699,
+        "unresolved_org_refs": 3638,
+        "persons_with_unresolved_orgs": 1858,
+        "retried_documents": 0,
+        "bulk_requests": 816,
+        "bulk_bytes": 6747225963,
+        "bulk_call_seconds": 244.62929521500337,
+        "worker_wall_seconds": 279.3269996169947,
+        "worker_cpu_seconds": 104.853960206,
+        "person_ingest_seconds": 38.839817167001456,
+        "person_ingest_cpu": {
+          "container_cpu_seconds": 107.311858,
+          "average_cpu_cores": 2.7629341698130547,
+          "cpu_quota_utilization_percent": 69.07335424532637,
+          "container_cpu_user_seconds": 89.461401,
+          "container_cpu_system_seconds": 17.850457,
+          "cpu_cgroup_throttled_seconds": 2.85127,
+          "cpu_cgroup_periods": 383,
+          "cpu_cgroup_throttled_periods": 14
+        },
+        "elasticsearch_person_count": 1000000,
+        "unresolved_org_ref_percent": 0.17465001586636344,
+        "wall_seconds": 49.61307404800027,
+        "persons_per_second": 20155.977414995643,
+        "peak_pipeline_memory_bytes": 1497411584,
+        "container_cpu_seconds": 131.808527,
+        "average_cpu_cores": 2.6569433697670997,
+        "cpu_quota_utilization_percent": 66.42358424417749,
+        "container_cpu_user_seconds": 110.938344,
+        "container_cpu_system_seconds": 20.870184,
+        "cpu_cgroup_throttled_seconds": 2.933163,
+        "cpu_cgroup_periods": 472,
+        "cpu_cgroup_throttled_periods": 25,
+        "max_sampled_cpu_cores": 4.201682097764813,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "finished_at": "2026-10-07T13:49:25.300038+00:00"
+      }
+    },
+    {
+      "label": "control_repeat",
+      "measurement": {
+        "status": "completed",
+        "run_id": "8f9226e9c2d04b50871157a0b6f8236d",
+        "started_at": "2026-10-07T13:50:22.828393+00:00",
+        "peak_elasticsearch_memory_bytes": null,
+        "workers": 8,
+        "bulk_target_bytes": 8388608,
+        "bulk_max_docs": 2000,
+        "org_cache_bytes_per_process": 4194304,
+        "index_shards": 4,
+        "person_files": 8,
+        "organization_files": 8,
+        "bulk_overlap": true,
+        "bulk_senders": 1,
+        "elasticsearch_version": "8.13.4",
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 1190666368,
+        "organization_stage_seconds": 10.574765385001228,
+        "organization_stage_workers": 4,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 27.08903,
+          "average_cpu_cores": 2.5616672345678575,
+          "cpu_quota_utilization_percent": 64.04168086419644,
+          "container_cpu_user_seconds": 22.320835,
+          "container_cpu_system_seconds": 4.768196,
+          "cpu_cgroup_throttled_seconds": 0.833296,
+          "cpu_cgroup_periods": 105,
+          "cpu_cgroup_throttled_periods": 29
+        },
+        "persons_indexed": 1000000,
+        "roles": 2083023,
+        "resolved_org_refs": 1381699,
+        "unresolved_org_refs": 3638,
+        "persons_with_unresolved_orgs": 1858,
+        "retried_documents": 0,
+        "bulk_requests": 816,
+        "bulk_bytes": 6747225963,
+        "bulk_call_seconds": 208.4645829229703,
+        "worker_wall_seconds": 294.36208868399626,
+        "worker_cpu_seconds": 116.49039309700001,
+        "person_ingest_seconds": 38.824283940000896,
+        "person_ingest_cpu": {
+          "container_cpu_seconds": 118.41697,
+          "average_cpu_cores": 3.0500747981083633,
+          "cpu_quota_utilization_percent": 76.25186995270909,
+          "container_cpu_user_seconds": 95.442186,
+          "container_cpu_system_seconds": 22.974784,
+          "cpu_cgroup_throttled_seconds": 2.652206,
+          "cpu_cgroup_periods": 389,
+          "cpu_cgroup_throttled_periods": 22
+        },
+        "elasticsearch_person_count": 1000000,
+        "unresolved_org_ref_percent": 0.17465001586636344,
+        "wall_seconds": 53.00985714200215,
+        "persons_per_second": 18864.416052305376,
+        "peak_pipeline_memory_bytes": 1849053184,
+        "container_cpu_seconds": 145.604904,
+        "average_cpu_cores": 2.7469614648296603,
+        "cpu_quota_utilization_percent": 68.6740366207415,
+        "container_cpu_user_seconds": 117.773144,
+        "container_cpu_system_seconds": 27.83176,
+        "cpu_cgroup_throttled_seconds": 3.485502,
+        "cpu_cgroup_periods": 507,
+        "cpu_cgroup_throttled_periods": 51,
+        "max_sampled_cpu_cores": 4.184011642763733,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "finished_at": "2026-10-07T13:51:15.834308+00:00"
+      }
+    },
+    {
+      "label": "candidate_repeat",
+      "measurement": {
+        "status": "completed",
+        "run_id": "70bda7a7f59445fa9fe93ab17df2fe55",
+        "started_at": "2026-10-07T13:52:28.715444+00:00",
+        "peak_elasticsearch_memory_bytes": null,
+        "workers": 8,
+        "bulk_target_bytes": 8388608,
+        "bulk_max_docs": 2000,
+        "org_cache_bytes_per_process": 4194304,
+        "index_shards": 4,
+        "person_files": 8,
+        "organization_files": 8,
+        "bulk_overlap": true,
+        "bulk_senders": 1,
+        "elasticsearch_version": "8.13.4",
+        "organizations": 529041,
+        "organization_raw_bytes": 1354040110,
+        "organization_store_bytes": 826138948,
+        "organization_stage_seconds": 9.495032356000593,
+        "organization_stage_workers": 4,
+        "organization_write_records": 10000,
+        "organization_write_bytes": 67108864,
+        "organization_putmulti": false,
+        "organization_read_buffers": true,
+        "organization_codec": "zstd",
+        "organization_codec_level": 1,
+        "organization_dictionary_requested_bytes": 32768,
+        "organization_dictionary_bytes": 32768,
+        "organization_dictionary_sha256": "6a0e948a21ff3c23a0e0eca5c139e8a90b66c87a5ae77ec3b774a5e7425a0de6",
+        "organization_dictionary_fallback_reason": null,
+        "organization_dictionary_sample_records": 1024,
+        "organization_dictionary_sample_bytes": 2612524,
+        "organization_dictionary_sampling_seconds": 0.24482459800128709,
+        "organization_dictionary_training_seconds": 0.13001308499951847,
+        "organization_codec_prepare_seconds": 0.38147274699804257,
+        "organization_stage_cpu": {
+          "container_cpu_seconds": 21.633177,
+          "average_cpu_cores": 2.2783679074382976,
+          "cpu_quota_utilization_percent": 56.95919768595744,
+          "container_cpu_user_seconds": 19.128144,
+          "container_cpu_system_seconds": 2.505033,
+          "cpu_cgroup_throttled_seconds": 0.055851,
+          "cpu_cgroup_periods": 93,
+          "cpu_cgroup_throttled_periods": 8
+        },
+        "persons_indexed": 1000000,
+        "roles": 2083023,
+        "resolved_org_refs": 1381699,
+        "unresolved_org_refs": 3638,
+        "persons_with_unresolved_orgs": 1858,
+        "retried_documents": 0,
+        "bulk_requests": 816,
+        "bulk_bytes": 6747225963,
+        "bulk_call_seconds": 222.85009622496364,
+        "worker_wall_seconds": 263.6407230090008,
+        "worker_cpu_seconds": 100.981616295,
+        "person_ingest_seconds": 34.474082553999324,
+        "person_ingest_cpu": {
+          "container_cpu_seconds": 103.066549,
+          "average_cpu_cores": 2.9896821427679527,
+          "cpu_quota_utilization_percent": 74.74205356919882,
+          "container_cpu_user_seconds": 86.774812,
+          "container_cpu_system_seconds": 16.291737,
+          "cpu_cgroup_throttled_seconds": 2.16843,
+          "cpu_cgroup_periods": 344,
+          "cpu_cgroup_throttled_periods": 19
+        },
+        "elasticsearch_person_count": 1000000,
+        "unresolved_org_ref_percent": 0.17465001586636344,
+        "wall_seconds": 47.61840788200061,
+        "persons_per_second": 21000.28212782797,
+        "peak_pipeline_memory_bytes": 1496813568,
+        "container_cpu_seconds": 124.775078,
+        "average_cpu_cores": 2.6205346225241732,
+        "cpu_quota_utilization_percent": 65.51336556310433,
+        "container_cpu_user_seconds": 105.91823,
+        "container_cpu_system_seconds": 18.856848,
+        "cpu_cgroup_throttled_seconds": 2.224281,
+        "cpu_cgroup_periods": 452,
+        "cpu_cgroup_throttled_periods": 27,
+        "max_sampled_cpu_cores": 5.442571070350738,
+        "peak_sampled_swap_bytes": 0,
+        "memory_events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "finished_at": "2026-10-07T13:53:16.330899+00:00"
+      }
+    }
+  ],
+  "tests": {
+    "passed": 140,
+    "skipped": 0,
+    "seconds": 13.876,
+    "environment": "Docker with real Zstd and Redis; unchanged pipeline constraints",
+    "final_default_repeat": {
+      "passed": 140,
+      "skipped": 0,
+      "failed": 0,
+      "seconds": 14.015
+    }
+  },
+  "selection": {
+    "organization_codec": "zstd",
+    "level": 1,
+    "dictionary_requested_bytes": 32768,
+    "write_records": 10000,
+    "write_bytes": 67108864,
+    "putmulti": false,
+    "read_buffers": true,
+    "person_cache_bytes_per_process": 4194304,
+    "throughput_gain_percent_vs_adjacent_repeat_control": 11.322195553790149,
+    "wall_time_reduction_percent_vs_adjacent_repeat_control": 10.170654196556296,
+    "peak_memory_reduction_percent_vs_adjacent_repeat_control": 19.04972875025751,
+    "store_size_reduction_percent_vs_adjacent_repeat_control": 30.615412494795525,
+    "cpu_work_reduction_percent_vs_adjacent_repeat_control": 14.305717340399472,
+    "rejected": [
+      "50000-record ISA-L/putmulti transactions left less memory headroom and no clear staging improvement over the repeated original control.",
+      "putmulti staging was slower than individual inserts in the Zstd samples.",
+      "64 KiB dictionary gave essentially the same level-1 codec sample result as 32 KiB.",
+      "Global key/person sorting would add preprocessing; it was not implemented or benchmarked."
+    ],
+    "read_buffers_note": "Avoids a compressed-value copy; standalone throughput improvement was not established by the serial samples.",
+    "limitation": "Observed local A/B/A/B gains with uncontrolled cache/ES warmup, not a portable guarantee or absolute maximum."
+  },
+  "validation": {
+    "independent_counts_passed": true,
+    "complete_source_samples_matched": 267,
+    "official_grader_exit_code": 1,
+    "official_placeholder_files_unchanged": true
+  }
+}

@@ -14,26 +14,53 @@ services:
       test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health | grep -q '\"status\":\"\\(green\\|yellow\\)\"'"]
       interval: 1s
       timeout: 3s
-      retries: 30
+      retries: 120
+      start_period: 30s
 
   pipeline:
-    build: ./pipeline
+    build:
+      context: .
+      dockerfile: pipeline/Dockerfile
     depends_on:
       elasticsearch:
         condition: service_healthy
     environment:
+      - PIPELINE_MODE=local
       - ES_URL=http://elasticsearch:9200
       - DATA_DIR=/data
+      - WORKERS=${WORKERS:-8}
+      - STAGE_WORKERS=${STAGE_WORKERS:-4}
+      - INDEX_SHARDS=${INDEX_SHARDS:-4}
+      - ORG_CACHE_BYTES=${ORG_CACHE_BYTES:-4194304}
+      - ORG_CODEC=${ORG_CODEC:-zstd}
+      - ORG_ZSTD_DICT_BYTES=${ORG_ZSTD_DICT_BYTES:-32768}
+      - ORG_WRITE_RECORDS=${ORG_WRITE_RECORDS:-10000}
+      - ORG_WRITE_BYTES=${ORG_WRITE_BYTES:-67108864}
+      - ORG_PUTMULTI=${ORG_PUTMULTI:-0}
+      - ORG_READ_BUFFERS=${ORG_READ_BUFFERS:-1}
+      - ORG_PREFETCH_RECORDS=${ORG_PREFETCH_RECORDS:-0}
+      - ORG_PREFETCH_SOURCE_BYTES=${ORG_PREFETCH_SOURCE_BYTES:-2097152}
+      - ORG_PREFETCH_BYTES=${ORG_PREFETCH_BYTES:-8388608}
+      - ORG_PREFETCH_SORT=${ORG_PREFETCH_SORT:-1}
+      - BULK_OVERLAP=${BULK_OVERLAP:-1}
+      - BULK_SENDERS=${BULK_SENDERS:-1}
+      - BULK_BYTES=${BULK_BYTES:-8388608}
+      - BULK_DOCS=${BULK_DOCS:-2000}
+      - RESET_INDEX=${RESET_INDEX:-0}
+      - METRICS_PATH=/metrics/latest.json
+      - STAGE_DIR=/stage
     volumes:
       - ./data:/data:ro
-      - ./pipeline:/app
+      - ./metrics:/metrics
+      - pipeline-stage:/stage
     # Hard ceiling — applies ONLY to the pipeline service. Do not raise.
     # The grader runs the pipeline against the same limits.
     # ES (and any other staging services you add) are unconstrained — give
     # them whatever resources you want.
     mem_limit: 2g
     cpus: 4.0
-    command: python -u /app/main.py
+    command: python -u /app/pipeline/main.py
 
 volumes:
   es-data:
+  pipeline-stage:

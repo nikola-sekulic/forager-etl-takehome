@@ -1,0 +1,49 @@
+# Optional shared staging and leased work. Keep the small take-home run local.
+# docker compose -f docker-compose.yml -f docker-compose.scale.yml up --build --scale pipeline=2
+services:
+  redis:
+    image: redis:7.4.2
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "2gb", "--maxmemory-policy", "noeviction"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 60
+
+  coordinator:
+    build:
+      context: .
+      dockerfile: pipeline/Dockerfile
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - PIPELINE_MODE=coordinator
+      - ES_URL=http://elasticsearch:9200
+      - REDIS_URL=redis://redis:6379/0
+      - DATA_DIR=/data
+      - STAGE_WORKERS=${STAGE_WORKERS:-8}
+      - INDEX_SHARDS=${INDEX_SHARDS:-4}
+      - RESET_INDEX=${RESET_INDEX:-0}
+      - METRICS_PATH=/metrics/latest.json
+    volumes:
+      - ./data:/data:ro
+      - ./metrics:/metrics
+    healthcheck:
+      test: ["CMD", "python", "/app/pipeline/distributed.py", "health"]
+      interval: 1s
+      timeout: 5s
+      retries: 120
+    command: python -u /app/pipeline/main.py
+
+  pipeline:
+    depends_on:
+      coordinator:
+        condition: service_healthy
+    environment:
+      - PIPELINE_MODE=worker
+      - WORKERS=${WORKERS:-4}
+      - REDIS_URL=redis://redis:6379/0
+      - ORG_CACHE_BYTES=${ORG_CACHE_BYTES:-134217728}

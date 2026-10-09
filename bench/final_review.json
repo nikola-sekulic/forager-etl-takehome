@@ -1,0 +1,92 @@
+{
+  "reviewed_at_utc": "2026-10-09T17:40:05.268076+00:00",
+  "run_id": "a884888b44b04a669ab893e4112aeb6d",
+  "measurement_artifact": "bench/latest_default_run.json",
+  "prior_review_artifact": "bench/pre_timing_review.json",
+  "execution_context": "October 9 timing-fix verification: fresh isolated Elasticsearch and staging volumes, new 2GiB/four-CPU pipeline container, raw input and default disabled prefetch. Measurement clocks now use perf_counter with zero-duration guards; input/join/index settings unchanged. Real Redis/Zstd tests ran before timed ingest; test Redis and original ES were stopped during it. Independent validation ran afterward. Host caches uncontrolled. Image build/ES startup excluded; all raw staging, dictionary preparation, ingestion, final flush/refresh/count checks included.",
+  "build": {
+    "success": true,
+    "tested_image_id": "sha256:5bb8a2c2d28152b7bc67866f373ce91669a2d6b1434c46fece4c4169bf14dc7a",
+    "dependency_layers_cached": true,
+    "final_submission_image_id": "sha256:19173dd47f2339365af411c4c762962247c0f5448c7813c0d4660e77045643b1"
+  },
+  "docker_limits_verified": {
+    "image_id": "sha256:5bb8a2c2d28152b7bc67866f373ce91669a2d6b1434c46fece4c4169bf14dc7a",
+    "memory_bytes": 2147483648,
+    "nano_cpus": 4000000000,
+    "exit_code": 0,
+    "oom_killed": false,
+    "source_mount_read_only": true
+  },
+  "regression_tests": {
+    "passed": 155,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 13.877,
+    "real_redis_enabled": true,
+    "real_zstandard_enabled": true,
+    "selected_compose_defaults_enabled": true,
+    "org_prefetch_records": 0
+  },
+  "timing_regression": {
+    "new_tests": 5,
+    "native_focused_tests": 17,
+    "native_seconds": 0.041,
+    "failure_status_preserved_at_zero_elapsed": true,
+    "local_coordinator_and_worker_paths_checked": true,
+    "zero_elapsed_does_not_invent_positive_duration_or_rate": true,
+    "distributed_deadlines_and_lease_clock_unchanged": true,
+    "native_actual_missing_input_repetitions": 20,
+    "native_actual_missing_input_failures_preserved": 20
+  },
+  "independent_validation": {
+    "run_id": "a884888b44b04a669ab893e4112aeb6d",
+    "exit_code": 0,
+    "counts": {
+      "total_persons": 1000000,
+      "persons_with_role_title": 7081,
+      "persons_at_organization": 647,
+      "persons_with_unresolved_references": 1858
+    },
+    "complete_source_samples_matched": 267,
+    "strategy": "Independent raw-source joins of deterministic reservoir samples plus missing/unresolved ID examples."
+  },
+  "official_grader": {
+    "status": "skipped_at_provider_instruction",
+    "exit_code": null,
+    "provider_reply_relayed_by_candidate_on": "2026-10-09",
+    "provider_instruction": "This was a mistake on our part, for now please skip this test.",
+    "provider_confirmed_observed_counts": false,
+    "frozen_files_unchanged": true,
+    "frozen_file_sha256": {
+      "bench/correctness.py": "f5fe9532868c606cb9a3740b75621c8d4acc2136b25ed25dcc175a6fdeb3edd2",
+      "bench/expected.json": "cc8d5e0c55a12030e80795f3d424056494cd8556845c1d66abe07335e2bb80d9"
+    },
+    "historical_result_artifact": "bench/pre_submission_review.json"
+  },
+  "final_index": {
+    "health": "green",
+    "active_primary_shards": 4,
+    "unassigned_shards": 0,
+    "refresh_interval": "1s",
+    "replicas": 0,
+    "translog_durability": "request"
+  },
+  "performance_report": {
+    "exit_code": 0,
+    "reported_run_matches_measurement": true,
+    "ingestion_metrics_file": "metrics/final-review/timing-latest.json"
+  },
+  "changes": [
+    "High-resolution duration measurements and zero-interval guards preserve final metrics after fast failures.",
+    "Candidate research, direction, scope and verification contributions prominently documented with accurate authorship."
+  ],
+  "limitations": [
+    "Fresh-volume verification is not a controlled performance comparison with earlier tuning runs.",
+    "Candidate human code review and candidate-owned GitHub submission remain to be completed."
+  ],
+  "cleanup": {
+    "isolated_verification_containers_and_volumes_removed": true,
+    "original_elasticsearch_restored_healthy": true
+  }
+}

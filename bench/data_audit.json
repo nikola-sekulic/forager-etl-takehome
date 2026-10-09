@@ -1,0 +1,1120 @@
+{
+  "started_at_utc": "2026-10-07T07:21:54.966476+00:00",
+  "python_version": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "parser": "orjson 3.10.7",
+  "purpose": "Aggregate raw-input audit; elapsed times are not Elasticsearch ingestion throughput.",
+  "schema_sample": {
+    "records_per_file": 100
+  },
+  "feeds": {
+    "organization": {
+      "counts": {
+        "blank_lines": 0,
+        "duplicate_ids": 0,
+        "envelope_source_id_mismatches": 0,
+        "invalid_envelope_ids": 0,
+        "invalid_envelope_rows": 0,
+        "malformed_json_rows": 0,
+        "rows": 529041
+      },
+      "distinct_ids": 529041,
+      "files": [
+        {
+          "path": "organization/data_0_0_0.json.gz",
+          "compressed_bytes": 48932572,
+          "decompressed_bytes": 172356784,
+          "rows": 65574,
+          "elapsed_seconds": 1.838
+        },
+        {
+          "path": "organization/data_0_1_0.json.gz",
+          "compressed_bytes": 50522545,
+          "decompressed_bytes": 177761143,
+          "rows": 67382,
+          "elapsed_seconds": 2.44
+        },
+        {
+          "path": "organization/data_0_2_0.json.gz",
+          "compressed_bytes": 51129281,
+          "decompressed_bytes": 179938676,
+          "rows": 68406,
+          "elapsed_seconds": 2.54
+        },
+        {
+          "path": "organization/data_0_3_0.json.gz",
+          "compressed_bytes": 51084469,
+          "decompressed_bytes": 179705160,
+          "rows": 68055,
+          "elapsed_seconds": 2.451
+        },
+        {
+          "path": "organization/data_0_4_0.json.gz",
+          "compressed_bytes": 47612959,
+          "decompressed_bytes": 167543454,
+          "rows": 63301,
+          "elapsed_seconds": 2.302
+        },
+        {
+          "path": "organization/data_0_5_0.json.gz",
+          "compressed_bytes": 49231565,
+          "decompressed_bytes": 173576057,
+          "rows": 65900,
+          "elapsed_seconds": 2.335
+        },
+        {
+          "path": "organization/data_0_6_0.json.gz",
+          "compressed_bytes": 49056426,
+          "decompressed_bytes": 172586361,
+          "rows": 65490,
+          "elapsed_seconds": 2.369
+        },
+        {
+          "path": "organization/data_0_7_0.json.gz",
+          "compressed_bytes": 48690982,
+          "decompressed_bytes": 171442193,
+          "rows": 64933,
+          "elapsed_seconds": 2.193
+        }
+      ],
+      "elapsed_seconds": 18.468,
+      "envelope_id_types": {
+        "int": 529041
+      },
+      "source_forager_id_types": {
+        "int": 529041
+      },
+      "top_level_field_types_full_feed": {
+        "addresses": {
+          "list": 529041
+        },
+        "area": {
+          "str": 411440
+        },
+        "city": {
+          "str": 383513
+        },
+        "country": {
+          "str": 476927
+        },
+        "date_updated": {
+          "str": 529041
+        },
+        "description": {
+          "str": 489396
+        },
+        "domain": {
+          "str": 452482
+        },
+        "domain_rank": {
+          "int": 245645
+        },
+        "domain_traffic": {
+          "int": 243686
+        },
+        "domain_tranco_rank": {
+          "int": 165974
+        },
+        "employees_number": {
+          "int": 509016
+        },
+        "employees_range": {
+          "str": 469475
+        },
+        "forager_id": {
+          "int": 529041
+        },
+        "founded_date": {
+          "str": 349341
+        },
+        "funding_rounds": {
+          "list": 529041
+        },
+        "industry": {
+          "str": 491048
+        },
+        "keywords": {
+          "list": 529041
+        },
+        "linkedin_id": {
+          "int": 529033
+        },
+        "linkedin_slug": {
+          "str": 513306
+        },
+        "linkedin_url": {
+          "str": 513306
+        },
+        "location": {
+          "str": 477940
+        },
+        "locations": {
+          "list": 529041
+        },
+        "logo_url": {
+          "str": 427185
+        },
+        "name": {
+          "str": 529041
+        },
+        "technologies": {
+          "list": 529041
+        },
+        "website": {
+          "str": 452596
+        }
+      },
+      "date_shapes_full_feed": {
+        "date_updated": {
+          "yyyy-MM-dd HH:mm:ss.fraction Z": 496599,
+          "yyyy-MM-dd HH:mm:ss.fraction +/-HHmm": 32442
+        },
+        "founded_date": {
+          "yyyy-MM-dd": 349341
+        }
+      },
+      "sampled_schema_types": {
+        "serialized_data": {
+          "dict": 800
+        },
+        "serialized_data.addresses": {
+          "list": 800
+        },
+        "serialized_data.addresses[]": {
+          "dict": 1559
+        },
+        "serialized_data.addresses[].city": {
+          "str": 1497
+        },
+        "serialized_data.addresses[].country": {
+          "str": 1559
+        },
+        "serialized_data.addresses[].is_headquarter": {
+          "bool": 1559
+        },
+        "serialized_data.addresses[].postcode": {
+          "str": 1214
+        },
+        "serialized_data.addresses[].state": {
+          "str": 1195
+        },
+        "serialized_data.addresses[].street_name": {
+          "str": 1273
+        },
+        "serialized_data.area": {
+          "str": 570
+        },
+        "serialized_data.city": {
+          "str": 530
+        },
+        "serialized_data.country": {
+          "str": 669
+        },
+        "serialized_data.date_updated": {
+          "str": 800
+        },
+        "serialized_data.description": {
+          "str": 684
+        },
+        "serialized_data.domain": {
+          "str": 635
+        },
+        "serialized_data.domain_rank": {
+          "int": 331
+        },
+        "serialized_data.domain_traffic": {
+          "int": 328
+        },
+        "serialized_data.domain_tranco_rank": {
+          "int": 223
+        },
+        "serialized_data.employees_number": {
+          "int": 714
+        },
+        "serialized_data.employees_range": {
+          "str": 660
+        },
+        "serialized_data.forager_id": {
+          "int": 800
+        },
+        "serialized_data.founded_date": {
+          "str": 484
+        },
+        "serialized_data.funding_rounds": {
+          "list": 800
+        },
+        "serialized_data.funding_rounds[]": {
+          "dict": 51
+        },
+        "serialized_data.funding_rounds[].date_featured": {
+          "str": 51
+        },
+        "serialized_data.funding_rounds[].funding_total": {
+          "int": 51
+        },
+        "serialized_data.funding_rounds[].funding_type": {
+          "str": 51
+        },
+        "serialized_data.industry": {
+          "str": 684
+        },
+        "serialized_data.keywords": {
+          "list": 800
+        },
+        "serialized_data.keywords[]": {
+          "str": 3134
+        },
+        "serialized_data.linkedin_id": {
+          "int": 800
+        },
+        "serialized_data.linkedin_slug": {
+          "str": 720
+        },
+        "serialized_data.linkedin_url": {
+          "str": 720
+        },
+        "serialized_data.location": {
+          "str": 669
+        },
+        "serialized_data.locations": {
+          "list": 800
+        },
+        "serialized_data.locations[]": {
+          "dict": 2892
+        },
+        "serialized_data.locations[].name": {
+          "str": 2892
+        },
+        "serialized_data.locations[].place_type": {
+          "str": 2892
+        },
+        "serialized_data.logo_url": {
+          "str": 591
+        },
+        "serialized_data.name": {
+          "str": 800
+        },
+        "serialized_data.technologies": {
+          "list": 800
+        },
+        "serialized_data.technologies[]": {
+          "str": 25249
+        },
+        "serialized_data.website": {
+          "str": 635
+        }
+      },
+      "sampled_max_array_lengths": {
+        "serialized_data.addresses": 82,
+        "serialized_data.funding_rounds": 4,
+        "serialized_data.keywords": 60,
+        "serialized_data.locations": 7,
+        "serialized_data.technologies": 244
+      },
+      "source_compact_json_bytes": 1354040110,
+      "largest_source_compact_json_bytes": 24484,
+      "decoded_memory_estimate": {
+        "method": "Mean recursive sys.getsizeof of first N decoded organization rows multiplied by all rows; excludes ID-map overhead and allocator overhead.",
+        "sample_rows": 1000,
+        "sample_decoded_bytes": 9758534,
+        "estimated_all_decoded_bytes": 5162664586,
+        "raw_json_bytes_plus_object_overhead_lower_bound": 1371498463
+      },
+      "target_organization_matching_ids_count": 1
+    },
+    "person": {
+      "counts": {
+        "blank_lines": 0,
+        "duplicate_ids": 0,
+        "envelope_source_id_mismatches": 0,
+        "existing_organization_objects": 34841,
+        "invalid_envelope_ids": 0,
+        "invalid_envelope_rows": 0,
+        "joined_organizations_deduplicated_per_person": 1089207,
+        "malformed_json_rows": 0,
+        "persons_joined_at_target_organization": 647,
+        "persons_with_existing_organizations": 17302,
+        "persons_with_joined_organizations": 465866,
+        "persons_with_missing_organization_ids": 395570,
+        "persons_with_roles": 685694,
+        "persons_with_target_organization_role_name": 570,
+        "persons_with_target_role_title": 7081,
+        "persons_with_unresolved_references": 1858,
+        "resolved_role_references": 1381699,
+        "roles": 2083023,
+        "roles_with_organization_id": 1385337,
+        "roles_without_usable_organization_id": 697686,
+        "rows": 1000000,
+        "unresolved_role_references": 3638
+      },
+      "distinct_ids": 1000000,
+      "files": [
+        {
+          "path": "person/data_0_0_0.json.gz",
+          "compressed_bytes": 83986413,
+          "decompressed_bytes": 362766319,
+          "rows": 122880,
+          "elapsed_seconds": 6.678
+        },
+        {
+          "path": "person/data_0_1_0.json.gz",
+          "compressed_bytes": 84549761,
+          "decompressed_bytes": 365099507,
+          "rows": 122880,
+          "elapsed_seconds": 5.869
+        },
+        {
+          "path": "person/data_0_2_0.json.gz",
+          "compressed_bytes": 84483657,
+          "decompressed_bytes": 364491918,
+          "rows": 122880,
+          "elapsed_seconds": 5.989
+        },
+        {
+          "path": "person/data_0_3_0.json.gz",
+          "compressed_bytes": 84191910,
+          "decompressed_bytes": 363300500,
+          "rows": 122880,
+          "elapsed_seconds": 5.775
+        },
+        {
+          "path": "person/data_0_4_0.json.gz",
+          "compressed_bytes": 96048384,
+          "decompressed_bytes": 414549711,
+          "rows": 139840,
+          "elapsed_seconds": 6.552
+        },
+        {
+          "path": "person/data_0_5_0.json.gz",
+          "compressed_bytes": 85221599,
+          "decompressed_bytes": 367428364,
+          "rows": 122880,
+          "elapsed_seconds": 5.692
+        },
+        {
+          "path": "person/data_0_6_0.json.gz",
+          "compressed_bytes": 84248263,
+          "decompressed_bytes": 363414248,
+          "rows": 122880,
+          "elapsed_seconds": 5.709
+        },
+        {
+          "path": "person/data_0_7_0.json.gz",
+          "compressed_bytes": 85258742,
+          "decompressed_bytes": 367330436,
+          "rows": 122880,
+          "elapsed_seconds": 6.358
+        }
+      ],
+      "elapsed_seconds": 48.622,
+      "envelope_id_types": {
+        "int": 1000000
+      },
+      "source_forager_id_types": {
+        "int": 1000000
+      },
+      "top_level_field_types_full_feed": {
+        "area": {
+          "str": 691437
+        },
+        "certifications": {
+          "list": 1000000
+        },
+        "city": {
+          "str": 616177
+        },
+        "country": {
+          "str": 997482
+        },
+        "courses": {
+          "list": 1000000
+        },
+        "date_updated": {
+          "str": 1000000
+        },
+        "description": {
+          "str": 195901
+        },
+        "educations": {
+          "list": 1000000
+        },
+        "first_name": {
+          "str": 1000000
+        },
+        "forager_id": {
+          "int": 1000000
+        },
+        "headline": {
+          "str": 997038
+        },
+        "honors": {
+          "list": 1000000
+        },
+        "industry": {
+          "str": 657617
+        },
+        "is_available": {
+          "bool": 1000000
+        },
+        "languages": {
+          "list": 1000000
+        },
+        "last_name": {
+          "str": 999179
+        },
+        "linkedin_area": {
+          "str": 997654
+        },
+        "linkedin_country": {
+          "str": 752165
+        },
+        "linkedin_id": {
+          "int": 1000000
+        },
+        "linkedin_slug": {
+          "str": 998337
+        },
+        "linkedin_url": {
+          "str": 998337
+        },
+        "location": {
+          "str": 997654
+        },
+        "locations": {
+          "list": 1000000
+        },
+        "number_of_connections": {
+          "int": 943237
+        },
+        "number_of_followers": {
+          "int": 943239
+        },
+        "organizations": {
+          "list": 1000000
+        },
+        "patents": {
+          "list": 1000000
+        },
+        "photo": {
+          "str": 294492
+        },
+        "projects": {
+          "list": 1000000
+        },
+        "publications": {
+          "list": 1000000
+        },
+        "roles": {
+          "list": 1000000
+        },
+        "skills": {
+          "list": 1000000
+        },
+        "test_scores": {
+          "list": 1000000
+        },
+        "volunteer_causes": {
+          "list": 1000000
+        },
+        "volunteering": {
+          "list": 1000000
+        }
+      },
+      "date_shapes_full_feed": {
+        "date_updated": {
+          "yyyy-MM-dd HH:mm:ss.fraction Z": 1000000
+        },
+        "roles.date_updated": {
+          "yyyy-MM-dd HH:mm:ss.fraction Z": 2083023
+        },
+        "roles.end_date": {
+          "yyyy-MM-dd": 1306567
+        },
+        "roles.start_date": {
+          "yyyy-MM-dd": 1785380
+        }
+      },
+      "sampled_schema_types": {
+        "serialized_data": {
+          "dict": 800
+        },
+        "serialized_data.area": {
+          "str": 572
+        },
+        "serialized_data.certifications": {
+          "list": 800
+        },
+        "serialized_data.certifications[]": {
+          "dict": 252
+        },
+        "serialized_data.certifications[].authority": {
+          "str": 245
+        },
+        "serialized_data.certifications[].certificate_id": {
+          "str": 94
+        },
+        "serialized_data.certifications[].certificate_name": {
+          "str": 252
+        },
+        "serialized_data.certifications[].certificate_url": {
+          "str": 117
+        },
+        "serialized_data.certifications[].forager_id": {
+          "int": 252
+        },
+        "serialized_data.certifications[].forager_organization_id": {
+          "int": 212
+        },
+        "serialized_data.certifications[].linkedin_id": {
+          "int": 252
+        },
+        "serialized_data.certifications[].linkedin_slug": {
+          "str": 209
+        },
+        "serialized_data.certifications[].organization_id": {
+          "int": 212
+        },
+        "serialized_data.certifications[].organization_linkedin_id": {
+          "int": 212
+        },
+        "serialized_data.city": {
+          "str": 498
+        },
+        "serialized_data.country": {
+          "str": 797
+        },
+        "serialized_data.courses": {
+          "list": 800
+        },
+        "serialized_data.courses[]": {
+          "dict": 101
+        },
+        "serialized_data.courses[].education_id": {
+          "int": 55
+        },
+        "serialized_data.courses[].forager_id": {
+          "int": 101
+        },
+        "serialized_data.courses[].name": {
+          "str": 101
+        },
+        "serialized_data.courses[].number": {
+          "str": 37
+        },
+        "serialized_data.courses[].role_id": {
+          "int": 12
+        },
+        "serialized_data.date_updated": {
+          "str": 800
+        },
+        "serialized_data.description": {
+          "str": 170
+        },
+        "serialized_data.educations": {
+          "list": 800
+        },
+        "serialized_data.educations[]": {
+          "dict": 721
+        },
+        "serialized_data.educations[].activities": {
+          "str": 64
+        },
+        "serialized_data.educations[].date_updated": {
+          "str": 721
+        },
+        "serialized_data.educations[].degree": {
+          "str": 551
+        },
+        "serialized_data.educations[].description": {
+          "str": 89
+        },
+        "serialized_data.educations[].end_date": {
+          "str": 590
+        },
+        "serialized_data.educations[].field_of_study": {
+          "str": 480
+        },
+        "serialized_data.educations[].grade": {
+          "str": 107
+        },
+        "serialized_data.educations[].id": {
+          "int": 721
+        },
+        "serialized_data.educations[].linkedin_id": {
+          "int": 721
+        },
+        "serialized_data.educations[].organization_id": {
+          "int": 459
+        },
+        "serialized_data.educations[].organization_linkedin_id": {
+          "int": 459
+        },
+        "serialized_data.educations[].organization_linkedin_info_public_identifier": {
+          "str": 458
+        },
+        "serialized_data.educations[].school_name": {
+          "str": 721
+        },
+        "serialized_data.educations[].start_date": {
+          "str": 608
+        },
+        "serialized_data.first_name": {
+          "str": 800
+        },
+        "serialized_data.forager_id": {
+          "int": 800
+        },
+        "serialized_data.headline": {
+          "str": 796
+        },
+        "serialized_data.honors": {
+          "list": 800
+        },
+        "serialized_data.honors[]": {
+          "dict": 57
+        },
+        "serialized_data.honors[].description": {
+          "str": 25
+        },
+        "serialized_data.honors[].education_id": {
+          "int": 18
+        },
+        "serialized_data.honors[].forager_id": {
+          "int": 57
+        },
+        "serialized_data.honors[].issued_on": {
+          "str": 38
+        },
+        "serialized_data.honors[].issuer": {
+          "str": 45
+        },
+        "serialized_data.honors[].role_id": {
+          "int": 25
+        },
+        "serialized_data.honors[].title": {
+          "str": 57
+        },
+        "serialized_data.industry": {
+          "str": 548
+        },
+        "serialized_data.is_available": {
+          "bool": 800
+        },
+        "serialized_data.languages": {
+          "list": 800
+        },
+        "serialized_data.languages[]": {
+          "dict": 167
+        },
+        "serialized_data.languages[].name": {
+          "str": 167
+        },
+        "serialized_data.languages[].proficiency": {
+          "str": 134
+        },
+        "serialized_data.last_name": {
+          "str": 798
+        },
+        "serialized_data.linkedin_area": {
+          "str": 797
+        },
+        "serialized_data.linkedin_country": {
+          "str": 616
+        },
+        "serialized_data.linkedin_id": {
+          "int": 800
+        },
+        "serialized_data.linkedin_slug": {
+          "str": 797
+        },
+        "serialized_data.linkedin_url": {
+          "str": 797
+        },
+        "serialized_data.location": {
+          "str": 797
+        },
+        "serialized_data.locations": {
+          "list": 800
+        },
+        "serialized_data.locations[]": {
+          "dict": 3134
+        },
+        "serialized_data.locations[].name": {
+          "str": 3134
+        },
+        "serialized_data.locations[].place_type": {
+          "str": 3134
+        },
+        "serialized_data.number_of_connections": {
+          "int": 726
+        },
+        "serialized_data.number_of_followers": {
+          "int": 726
+        },
+        "serialized_data.organizations": {
+          "list": 800
+        },
+        "serialized_data.organizations[]": {
+          "dict": 30
+        },
+        "serialized_data.organizations[].description": {
+          "str": 4
+        },
+        "serialized_data.organizations[].forager_id": {
+          "int": 30
+        },
+        "serialized_data.organizations[].linkedin_id": {
+          "int": 30
+        },
+        "serialized_data.organizations[].name": {
+          "str": 30
+        },
+        "serialized_data.organizations[].role_title": {
+          "str": 14
+        },
+        "serialized_data.patents": {
+          "list": 800
+        },
+        "serialized_data.patents[]": {
+          "dict": 2
+        },
+        "serialized_data.patents[].application_number": {
+          "str": 1
+        },
+        "serialized_data.patents[].description": {
+          "str": 2
+        },
+        "serialized_data.patents[].filled_on": {
+          "str": 1
+        },
+        "serialized_data.patents[].forager_id": {
+          "int": 2
+        },
+        "serialized_data.patents[].issued_on": {
+          "str": 1
+        },
+        "serialized_data.patents[].linkedin_inventors": {
+          "list": 2
+        },
+        "serialized_data.patents[].linkedin_inventors[]": {
+          "dict": 3
+        },
+        "serialized_data.patents[].linkedin_inventors[].forager_person_id": {
+          "int": 3
+        },
+        "serialized_data.patents[].linkedin_inventors[].linkedin_slug": {
+          "str": 3
+        },
+        "serialized_data.patents[].non_linkedin_inventors_ids": {
+          "list": 2
+        },
+        "serialized_data.patents[].non_linkedin_inventors_ids[]": {
+          "str": 3
+        },
+        "serialized_data.patents[].pending": {
+          "bool": 2
+        },
+        "serialized_data.patents[].title": {
+          "str": 2
+        },
+        "serialized_data.patents[].url": {
+          "str": 2
+        },
+        "serialized_data.photo": {
+          "str": 236
+        },
+        "serialized_data.projects": {
+          "list": 800
+        },
+        "serialized_data.projects[]": {
+          "dict": 89
+        },
+        "serialized_data.projects[].description": {
+          "str": 69
+        },
+        "serialized_data.projects[].education_id": {
+          "int": 38
+        },
+        "serialized_data.projects[].end": {
+          "str": 65
+        },
+        "serialized_data.projects[].forager_id": {
+          "int": 89
+        },
+        "serialized_data.projects[].linkedin_contributors": {
+          "list": 89
+        },
+        "serialized_data.projects[].linkedin_contributors[]": {
+          "dict": 22
+        },
+        "serialized_data.projects[].linkedin_contributors[].forager_person_id": {
+          "int": 22
+        },
+        "serialized_data.projects[].linkedin_contributors[].linkedin_slug": {
+          "str": 22
+        },
+        "serialized_data.projects[].non_linkedin_contributors_ids": {
+          "str": 89
+        },
+        "serialized_data.projects[].role_id": {
+          "int": 38
+        },
+        "serialized_data.projects[].start": {
+          "str": 77
+        },
+        "serialized_data.projects[].title": {
+          "str": 89
+        },
+        "serialized_data.projects[].url": {
+          "str": 22
+        },
+        "serialized_data.publications": {
+          "list": 800
+        },
+        "serialized_data.publications[]": {
+          "dict": 30
+        },
+        "serialized_data.publications[].description": {
+          "str": 9
+        },
+        "serialized_data.publications[].id": {
+          "int": 30
+        },
+        "serialized_data.publications[].linkedin_authors": {
+          "list": 30
+        },
+        "serialized_data.publications[].linkedin_authors[]": {
+          "dict": 3
+        },
+        "serialized_data.publications[].linkedin_authors[].forager_person_id": {
+          "int": 3
+        },
+        "serialized_data.publications[].linkedin_authors[].linkedin_slug": {
+          "str": 3
+        },
+        "serialized_data.publications[].name": {
+          "str": 30
+        },
+        "serialized_data.publications[].non_linkedin_authors": {
+          "list": 30
+        },
+        "serialized_data.publications[].non_linkedin_authors[]": {
+          "str": 31
+        },
+        "serialized_data.publications[].published_in": {
+          "str": 19
+        },
+        "serialized_data.publications[].publisher": {
+          "str": 29
+        },
+        "serialized_data.publications[].url": {
+          "str": 19
+        },
+        "serialized_data.roles": {
+          "list": 800
+        },
+        "serialized_data.roles[]": {
+          "dict": 1744
+        },
+        "serialized_data.roles[].date_updated": {
+          "str": 1744
+        },
+        "serialized_data.roles[].description": {
+          "str": 691
+        },
+        "serialized_data.roles[].employment_type": {
+          "str": 803
+        },
+        "serialized_data.roles[].end_date": {
+          "str": 1104
+        },
+        "serialized_data.roles[].id": {
+          "int": 1744
+        },
+        "serialized_data.roles[].linkedin_id": {
+          "int": 1744
+        },
+        "serialized_data.roles[].location": {
+          "str": 692
+        },
+        "serialized_data.roles[].organization_domain": {
+          "str": 1135
+        },
+        "serialized_data.roles[].organization_id": {
+          "int": 1210
+        },
+        "serialized_data.roles[].organization_industry": {
+          "str": 1165
+        },
+        "serialized_data.roles[].organization_linkedin_id": {
+          "int": 1210
+        },
+        "serialized_data.roles[].organization_linkedin_info_public_identifier": {
+          "str": 1188
+        },
+        "serialized_data.roles[].organization_name": {
+          "str": 1677
+        },
+        "serialized_data.roles[].organization_website": {
+          "str": 1135
+        },
+        "serialized_data.roles[].role_title": {
+          "str": 1744
+        },
+        "serialized_data.roles[].start_date": {
+          "str": 1510
+        },
+        "serialized_data.skills": {
+          "list": 800
+        },
+        "serialized_data.skills[]": {
+          "str": 4933
+        },
+        "serialized_data.test_scores": {
+          "list": 800
+        },
+        "serialized_data.volunteer_causes": {
+          "list": 800
+        },
+        "serialized_data.volunteer_causes[]": {
+          "str": 47
+        },
+        "serialized_data.volunteering": {
+          "list": 800
+        },
+        "serialized_data.volunteering[]": {
+          "dict": 74
+        },
+        "serialized_data.volunteering[].cause": {
+          "str": 47
+        },
+        "serialized_data.volunteering[].company_name": {
+          "str": 74
+        },
+        "serialized_data.volunteering[].description": {
+          "str": 40
+        },
+        "serialized_data.volunteering[].end": {
+          "str": 46
+        },
+        "serialized_data.volunteering[].forager_id": {
+          "int": 74
+        },
+        "serialized_data.volunteering[].start": {
+          "str": 64
+        },
+        "serialized_data.volunteering[].title": {
+          "str": 74
+        }
+      },
+      "sampled_max_array_lengths": {
+        "serialized_data.certifications": 20,
+        "serialized_data.courses": 20,
+        "serialized_data.educations": 16,
+        "serialized_data.honors": 10,
+        "serialized_data.languages": 5,
+        "serialized_data.locations": 7,
+        "serialized_data.organizations": 4,
+        "serialized_data.patents": 2,
+        "serialized_data.patents[].linkedin_inventors": 2,
+        "serialized_data.patents[].non_linkedin_inventors_ids": 2,
+        "serialized_data.projects": 18,
+        "serialized_data.projects[].linkedin_contributors": 9,
+        "serialized_data.publications": 8,
+        "serialized_data.publications[].linkedin_authors": 1,
+        "serialized_data.publications[].non_linkedin_authors": 2,
+        "serialized_data.roles": 21,
+        "serialized_data.skills": 90,
+        "serialized_data.test_scores": 0,
+        "serialized_data.volunteer_causes": 4,
+        "serialized_data.volunteering": 6
+      },
+      "role_organization_id_types": {
+        "int": 1385337,
+        "NoneType": 697686
+      },
+      "role_field_types_full_feed": {
+        "date_updated": {
+          "str": 2083023
+        },
+        "description": {
+          "str": 801307
+        },
+        "employment_type": {
+          "str": 880995
+        },
+        "end_date": {
+          "str": 1306567
+        },
+        "id": {
+          "int": 2083023
+        },
+        "linkedin_id": {
+          "int": 2083023
+        },
+        "location": {
+          "str": 795522
+        },
+        "organization_domain": {
+          "str": 1275940
+        },
+        "organization_id": {
+          "int": 1385337
+        },
+        "organization_industry": {
+          "str": 1331211
+        },
+        "organization_linkedin_id": {
+          "int": 1385326
+        },
+        "organization_linkedin_info_public_identifier": {
+          "str": 1358867
+        },
+        "organization_name": {
+          "str": 2022073
+        },
+        "organization_website": {
+          "str": 1276093
+        },
+        "role_title": {
+          "str": 2082214
+        },
+        "start_date": {
+          "str": 1785380
+        }
+      },
+      "distinct_referenced_organization_ids": 528955,
+      "distinct_unresolved_organization_ids": 3085,
+      "distinct_resolved_organization_ids": 525870
+    }
+  },
+  "measured_correctness_counts": {
+    "index_name": "persons",
+    "total_persons": 1000000,
+    "persons_with_role_title": {
+      "role_title": "Project Manager",
+      "count": 7081
+    },
+    "persons_at_organization": {
+      "name": "Dell Technologies",
+      "count": 647
+    }
+  },
+  "frozen_fixture_comparison": {
+    "path": "bench/expected.json",
+    "fixture_note": "Placeholder counts. Replace with real counts produced when generating expected values from the data bundle, before sending to a candidate. The test script reads this file.",
+    "total_persons_matches": true,
+    "role_count_matches": false,
+    "organization_count_matches": false,
+    "file_modified": false
+  },
+  "limitations": [
+    "Schema nested-type inspection samples first N rows of each file; top-level and role field types cover the full feed.",
+    "Decoded organization-memory estimate is a sample extrapolation, not a container RSS measurement.",
+    "Rows stream through memory, but ID sets grow with distinct IDs; this utility is not the production pipeline.",
+    "Join counts replace the input organizations array using resolved role IDs and deduplicate organizations per person.",
+    "Audit timing includes gzip decoding, JSON parsing, counting and schema sampling on the stated host."
+  ],
+  "elapsed_seconds": 67.782,
+  "completed_at_utc": "2026-10-07T07:23:02.748216+00:00"
+}

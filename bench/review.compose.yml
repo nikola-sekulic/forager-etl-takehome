@@ -1,0 +1,21 @@
+# Isolated final verification: use docker-compose.yml first so paths stay at
+# the repository root. The default submission does not use this overlay.
+# docker compose -p etl-final-review -f docker-compose.yml -f bench/review.compose.yml up -d --wait elasticsearch redis
+services:
+  elasticsearch:
+    ports: !override
+      - "19200:9200"
+  pipeline:
+    volumes: !override
+      - ./data:/data:ro
+      - ./metrics/final-review:/metrics
+      - pipeline-stage:/stage
+  redis:
+    image: redis:7.4.2
+    profiles: [test]
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30

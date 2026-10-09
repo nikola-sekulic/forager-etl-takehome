@@ -1,0 +1,22 @@
+# Reproducible isolated LMDB trials. Use after docker-compose.yml and set
+# project name etl-lmdb-tuning. Raw input is unchanged; only runtime staging
+# differs. LMDB_TRIAL_IMAGE can select an explicitly preserved control image.
+services:
+  elasticsearch:
+    ports: !override
+      - "19200:9200"
+  pipeline:
+    image: ${LMDB_TRIAL_IMAGE:-etl-lmdb-candidate:trial}
+    volumes: !override
+      - ./data:/data:ro
+      - ./metrics/lmdb-tuning:/metrics
+      - pipeline-stage:/stage
+  redis:
+    image: redis:7.4.2
+    profiles: [test]
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
